@@ -194,3 +194,97 @@ footer {
 .footer__icon {
     width: 40px;
 }
+
+/*CHOOSE ROUTE*/
+
+/*BODY*/
+
+.routes__body {
+    background-color: rgb(174, 174, 174);
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/024/649/105/small/pattern-pokeball-red-and-white-ball-of-the-popular-cartoon-90s-pixel-art-free-vector.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*ROUTES*/
+
+.routes {
+    width: 75%;
+    margin-top: 300px;
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax (150, 1fr));
+    grid-template-rows: repeat(autofit, minmax (150, 1fr));
+    grid-gap: 30px;
+    grid-template-areas:
+        'a a a'
+        'b c d';
+}
+
+.routes__history {
+    background-color: rgb(106, 106, 106, 0.75);
+    padding: 10px;
+    text-align: justify;
+    border-radius: 10px;
+    grid-area: a;
+    text-align: center;
+}
+
+.routes__option__img {
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    display: block;
+}
+
+.routes__option {
+    background-color: rgb(106, 106, 106, 0.75);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.routes__option__txt {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    opacity: 0;
+}
+
+.routes__option:hover .routes__option__txt {
+    opacity: 1;
+}
+
+.routes__option--b {
+    grid-area: b;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.routes__option--c {
+    grid-area: c;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.routes__option--d {
+    grid-area: d;
+    object-fit: cover;
+    overflow: hidden;
+}
