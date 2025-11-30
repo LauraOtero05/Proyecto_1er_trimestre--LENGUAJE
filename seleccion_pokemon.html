@@ -18,6 +18,7 @@
 
 <body class="body__pokemonSelect">
 
+    <!-- Header -->
     <header>
         <img class="header__logo" src="fotos/Pokémon_logo.png" alt="Logo de Pokemon">
         <div class="header__icons">
@@ -60,9 +61,9 @@
     </header>
 
     <!-- Pantalla de selección de pokemon -->
-    <section class="screen__PokemonSelect">
+    <section class="screen__PokemonSelect ">
         <img class="background__PokemonSelect" src="fotos/Fondo_seleccion_pokemon.png"
-            alt="el fondo de la pagina es la entrada al centro pokemon">
+            alt="el fondo del centro pokemon con el porfesor Oas y Ash">
 
         <div class="game__box game__box--Top">
             <h1 class="main__subtitle">¡Bienvenido! Has llegado al centro pokemon</h1>
@@ -76,9 +77,36 @@
         </div>
 
         <div class="pokemon__box">
-            <img class="pokemon__img" src="fotos/Nidoran.png" alt="Foto del pokemon Nidoran">
-            <img class="pokemon__img" src="fotos/Staryu.png" alt="Foto del pokemon Staryu">
-            <img class="pokemon__img" src="fotos/Vulpix.png" alt="Foto del pokemon Vulpix">
+            <div class="selected">
+                <img class="pokemon__img" src="fotos/Nidoran.png" alt="Foto del pokemon Nidoran">
+                <div class="game__box">
+                    <h1 class="pokemon__h1">Nidoran</h1>
+                    <p class="pokemon__text">Sus ataques son:</p>
+                    <p class="pokemon__text">Onda toxica: tiene un rango de <br>daño de 0 a 60</p>
+                    <p class="pokemon__text">Placaje: tiene un rango de <br>daño de 0 a 40</p>
+                </div>
+            </div>
+
+            <div class="selected">
+                <img class="pokemon__img" src="fotos/Staryu.png" alt="Foto del pokemon Staryu">
+                <div class="game__box">
+                    <h1 class="pokemon__h1">Staryu</h1>
+                    <p class="pokemon__text">Sus ataques son:</p>
+                    <p class="pokemon__text">Hidropulso: tiene un rango de <br>daño de 0 a 60</p>
+                    <p class="pokemon__text">Placaje: tiene un rango de <br>daño de 0 a 40</p>
+                </div>
+            </div>
+
+            <div class="selected">
+                <img class="pokemon__img" src="fotos/Vulpix.png" alt="Foto del pokemon Vulpix">
+                <div class="game__box">
+                    <h1 class="pokemon__h1">Vulpix</h1>
+                    <p class="pokemon__text">Sus ataques son:</p>
+                    <p class="pokemon__text">Llamarada: tiene un rango de <br>daño de 0 a 60</p>
+                    <p class="pokemon__text">Placaje: tiene un rango de <br>daño de 0 a 40</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -92,15 +120,34 @@
             <p class="main__text">Unicamente puedes elegir un objeto para tu inventario. ¡Elige bien!</p>
 
             <div class="inventory__box">
-                <img class="inventory__img" src="fotos/Revivir.png" alt="">
-                <img class="inventory__img" src="fotos/Linterna.png" alt="">
-                <img class="inventory__img" src="fotos/Pocion.png" alt="">
+                <div class="initial__object">
+                    <img class="inventory__img" src="fotos/Pocion.png" alt="es una pocion para curar al pokemon">
+                    <div class="">
+                        <h1 class="inventory__h1">Pocion de vida</h1>
+                        <p class="inventory__text">Ayudará a tu pokemon a recuperar algo de vida</p>
+                    </div>
+                </div>
+
+                <div class="initial__object">
+                    <img class="inventory__img" src="fotos/Linterna.png" alt="es una linterna">
+                    <div class="">
+                        <h1 class="inventory__h1">Linterna</h1>
+                        <p class="inventory__text">Amplifica la visión en lugares oscuros</p>
+                    </div>
+                </div>
+
+                <div class="initial__object">
+                    <img class="inventory__img" src="fotos/Revivir.png" alt="es un objeto para revivir al pokemon">
+                    <div class="">
+                        <h1 class="inventory__h1">Revivir</h1>
+                        <p class="inventory__text">Revive a tu pokemon en el caso de quedarse sin vida</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-
     <footer>
         <div class="footer__group">
             <div class="footer__column">
