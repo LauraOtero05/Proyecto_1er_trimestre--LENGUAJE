@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon</title>
-    <link rel="stylesheet" href="style_inicio.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Cuando pase todo el css a styles tengo que borrar este link -->
+    <link rel="stylesheet" href="style_inicio.css"> 
+
+    <!-- Hay que linkear todos los estilos de letras en uno solo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -14,15 +19,15 @@
 
 </head>
 
-<body>
+<body class="body__homepage">
 
-    <img id="background-video" autoplay muted loop playsinline class="Fondo__video" src="https://i.pinimg.com/originals/e6/2e/83/e62e8349d3b94b765ba7d10f01a3ff38.gif" alt="">
+    <img class="fondo__video" src="https://i.pinimg.com/originals/e6/2e/83/e62e8349d3b94b765ba7d10f01a3ff38.gif" alt="">
 
-    <section class="inicio">
-        <div class="inicio__cuadro">
-            <h1 class="inicio__h1">¿Quieres iniciar la aventura?</h1>
-            <button class="inicio__cuadro--peq">
-                <a class="inicio__enlace" href="seleccion_pokemon.html">
+    <section class="start">
+        <div class="game__box">
+            <h1 class="main__title">¿Quieres iniciar la aventura?</h1>
+            <button class="game__button">
+                <a class="game__buttonLink" href="seleccion_pokemon.html">
                     Comenzar
                 </a>
             </button>
