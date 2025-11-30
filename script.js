@@ -57,11 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
 /*POKEMON SELECTION AND INVENTORY*/
 
     // Para diferenciar las dos pantallas
-    const pantallaPokemon = document.querySelector('.pantalla__selecPokemon');
-    const pantallaInventario = document.querySelector('.pantalla__selecInvent');
+    const pantallaPokemon = document.querySelector('.screen__PokemonSelect');
+    const pantallaInventario = document.querySelector('.screen__InvenSelect');
 
     //Elección de la imagen de los pokemons
-    const pokemons = document.querySelectorAll('.box__selecPokemon__img');
+    const pokemons = document.querySelectorAll('.pokemon__img');
 
     // Cambio de pantalla al alegir el pokemon
     pokemons.forEach(pokemon => {

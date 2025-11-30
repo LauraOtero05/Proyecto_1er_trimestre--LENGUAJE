@@ -1,3 +1,12 @@
+/* Body */
+
+.body{
+    font-family: "Jersey 10", "Pixelify Sans", "Montserrat", Arial, Helvetica, sans-serif;
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
 /* Todas las cajas del juego iguales */
 
 .game__box{
@@ -15,7 +24,7 @@
     0 0 0 23px rgb(109, 109, 109);
     border-radius: 10px;
     position: fixed;
-    bottom: 80px;
+
 }
 
 .game__button{
@@ -27,9 +36,10 @@
     width: fit-content;
     height: fit-content;
     padding: 8px;
+
 }
 
-.game__buttonLink{
+.game__buttonText{
     text-decoration: none;
     color: white;
     font-family: "Pixelify Sans", sans-serif;
@@ -234,24 +244,6 @@ footer {
     width: 40px;
 }
 
-/*CHOOSE ROUTE*/
-
-/*BODY*/
-
-.routes__body {
-    background-color: rgb(174, 174, 174);
-    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/024/649/105/small/pattern-pokeball-red-and-white-ball-of-the-popular-cartoon-90s-pixel-art-free-vector.jpg);
-    background-size: cover;
-    background-blend-mode: multiply;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
 /* HOMEPAGE */
 .body__homepage{
     font-family: "Pixelify Sans", sans-serif;
@@ -274,11 +266,108 @@ footer {
     align-items: center;
 }
 
+.game__box--Bottom{
+    bottom: 80px;
+}
+
+/* POKEMON SELECT */
+
+.game__box--Top{
+    top: 100px;
+}
+
+.screen__PokemonSelect,
+.screen__InvenSelect{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*Activar o desactivar para hacer pruebas en la pantalla de inventario*/
+/* .screen__PokemonSelect{ 
+    display: none;
+} */
+
+.screen__InvenSelect{
+    display: none;
+}
+
+.background__PokemonSelect,
+.background__InvenSelect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 80%;
+}
+
+.track__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.track__box--Hidden{
+    display: none;
+    font-family: "Jersey 10", "Pixelify Sans", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.track__box:hover .track__box--Hidden{
+    display: block;
+}
+
+.pokemon__box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 10px;
+}
+
+.pokemon__img{
+    width: 350px;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+}
+
+.pokemon__img:hover{
+    transform: scale(1.2);
+}
 
 
 
 
 
+
+
+
+
+/*CHOOSE ROUTE*/
+
+/*BODY*/
+
+.routes__body {
+    background-color: rgb(174, 174, 174);
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/024/649/105/small/pattern-pokeball-red-and-white-ball-of-the-popular-cartoon-90s-pixel-art-free-vector.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
 /*ROUTES*/
 

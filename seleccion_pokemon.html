@@ -4,44 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokemon Select</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link del css a borrar cuando pase todo al general -->
     <link rel="stylesheet" href="seleccion_pokemon.css">
-    <link rel="stylesheet" href="style_inicio.css">
+
+    <!-- Falta linkear bien todos los estilos de letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
     <!-- Pantalla de selección de pokemon -->
-    <section class="pantalla__selecPokemon">
-        <img class="fondo__selecPokemon" src="fotos/Fondo_seleccion_pokemon.png"
-            alt="el fondo de la pagina es la entrada al centro pokemon">
+    <section class="screen__PokemonSelect">
+        <img class="background__PokemonSelect" src="fotos/Fondo_seleccion_pokemon.png" alt="el fondo de la pagina es la entrada al centro pokemon">
 
-
-
-        <div class="explicacion_selecPokemon explicacion_selecPokemon--font">
-            <h1 class="explicacion_selecPokemon--font">¡Bienvenido! Has llegado al centro pokemon</h1>
-            <p>Ahora es tu turno de elegir quien va a ser tu compañero <br>durante el resto de la aventura.</p>
-            <div class="explicacion_selecPokemon__pista">
-                <p class="explicacion_selecPokemon__pista--button">Pista</p>
-                <p class="explicacion_selecPokemon__pista--oculto">Esta decisión será cruzial en los siguientes pasos,
-                    <br>así que piensatelo bien
-                </p>
+        <div class="game__box game__box--Top">
+            <h1 class="main__subtitle">¡Bienvenido! Has llegado al centro pokemon</h1>
+            <p class="main__text">Ahora es tu turno de elegir quien va a ser tu compañero <br>durante el resto de la aventura.</p>
+            <div class="track__box">
+                <p class="game__button game__buttonText">Pista</p>
+                <p class="track__box--Hidden">Esta decisión será cruzial en los siguientes pasos,<br>así que piensatelo bien</p>
             </div>
         </div>
 
-
-
-        <section class="box__selecPokemon">
-                <img class="box__selecPokemon__img" src="fotos/Nidoran.png" alt="Foto del pokemon Nidoran">
-                <img class="box__selecPokemon__img" src="fotos/Staryu.png" alt="Foto del pokemon Staryu">
-                <img class="box__selecPokemon__img" src="fotos/Vulpix.png" alt="Foto del pokemon Vulpix">
+        <section class="pokemon__box">
+                <img class="pokemon__img" src="fotos/Nidoran.png" alt="Foto del pokemon Nidoran">
+                <img class="pokemon__img" src="fotos/Staryu.png" alt="Foto del pokemon Staryu">
+                <img class="pokemon__img" src="fotos/Vulpix.png" alt="Foto del pokemon Vulpix">
         </section>
     </section>
 
     <!-- Pantalla de selección de inventario -->
-    <section class="pantalla__selecInvent">
-        <img class="fondo__selcInvent" src="fotos/Fondo_seleccion_inventario.png"
+    <section class="screen__InvenSelect">
+        <img class="background__InvenSelect" src="fotos/Fondo_seleccion_inventario.png"
             alt="el fondo de la pagina es la enfermería del centro pokemon">
 
         <div class="explicacion_selecInvent">
