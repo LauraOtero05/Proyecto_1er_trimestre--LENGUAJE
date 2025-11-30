@@ -288,13 +288,13 @@ footer {
 }
 
 /*Activar o desactivar para hacer pruebas en la pantalla de inventario*/
-/* .screen__PokemonSelect{ 
-    display: none;
-} */
-
-.screen__InvenSelect{
+.screen__PokemonSelect{ 
     display: none;
 }
+
+/* .screen__InvenSelect{
+    display: none;
+} */
 
 .background__PokemonSelect,
 .background__InvenSelect{
@@ -343,6 +343,21 @@ footer {
     transform: scale(1.2);
 }
 
+.inventory__box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.inventory__img{
+    width: 200px;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+}
+
+.inventory__img:hover{
+    transform: scale(1.2);
+}
 
 
 

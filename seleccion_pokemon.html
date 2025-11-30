@@ -7,9 +7,6 @@
     <title>Pokemon Select</title>
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Link del css a borrar cuando pase todo al general -->
-    <link rel="stylesheet" href="seleccion_pokemon.css">
-
     <!-- Falta linkear bien todos los estilos de letra -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,32 +30,30 @@
             </div>
         </div>
 
-        <section class="pokemon__box">
+        <div class="pokemon__box">
                 <img class="pokemon__img" src="fotos/Nidoran.png" alt="Foto del pokemon Nidoran">
                 <img class="pokemon__img" src="fotos/Staryu.png" alt="Foto del pokemon Staryu">
                 <img class="pokemon__img" src="fotos/Vulpix.png" alt="Foto del pokemon Vulpix">
-        </section>
+        </div>
     </section>
 
     <!-- Pantalla de selección de inventario -->
     <section class="screen__InvenSelect">
-        <img class="background__InvenSelect" src="fotos/Fondo_seleccion_inventario.png"
-            alt="el fondo de la pagina es la enfermería del centro pokemon">
+        <img class="background__InvenSelect" src="fotos/Fondo_seleccion_inventario.png" alt="el fondo de la pagina es la enfermería del centro pokemon">
 
-        <div class="explicacion_selecInvent">
-            <h1>Inventario</h1>
-            <p>Unicamente puedes elegir un objeto para tu inventario. ¡Elige bien!</p>
+        <div class="game__box">
+            <h1 class="main__subtitle">Inventario</h1>
+            <p class="main__text">Unicamente puedes elegir un objeto para tu inventario. ¡Elige bien!</p>
 
-            <div>
-                    <img class="explicacion_selecInvent--img" src="fotos/Revivir.png" alt="">
-                    <img class="explicacion_selecInvent--img" src="fotos/Linterna.png" alt="">
-                    <img class="explicacion_selecInvent--img" src="fotos/Pocion.png" alt="">
+            <div class="inventory__box">
+                    <img class="inventory__img" src="fotos/Revivir.png" alt="">
+                    <img class="inventory__img" src="fotos/Linterna.png" alt="">
+                    <img class="inventory__img" src="fotos/Pocion.png" alt="">
             </div>
-
         </div>
     </section>
 
-    <!-- Linkear el script -->
+    <!-- Link del script -->
     <script src="script.js"></script>
 
 </body>
