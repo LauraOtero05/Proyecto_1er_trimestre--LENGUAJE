@@ -142,10 +142,13 @@ header {
     background-image: url(fotos/battle_options.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 400px;
     width: 100%;
     height: 60%;
+    display: grid;
+
 }
+
 
 .sectionBattle__optionsChoose{
 
@@ -227,11 +230,29 @@ header {
     border-radius: 15px;
 }
 
+.lifePositionEnemy{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.lifePositionPlayer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
 
 
 /*Vida de .vida-contenedor*/
 
-.vida_container{
+.life_container{
+  display: flex;
+  justify-content: center;
+  grid-area: player;
   width: 200px;
   height: 20px;
   background-color: #444; /* color de fondo */
@@ -243,6 +264,21 @@ header {
   width: 100%;        /* empieza al 100% */
   height: 100%;
   background-color: green;
+  transition: width 0.3s ease; /* animación suave */
+}
+
+.life_containerEnemy{
+  width: 200px;
+  height: 20px;
+  background-color: #444; /* color de fondo */
+  border-radius: 10px;
+  overflow: hidden; /* para que el borde redondeado afecte al interior */
+}
+
+.life_enemy{
+  width: 100%;        /* empieza al 100% */
+  height: 100%;
+  background-color: red;
   transition: width 0.3s ease; /* animación suave */
 }
 

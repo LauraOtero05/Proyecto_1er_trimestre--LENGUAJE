@@ -1,5 +1,5 @@
 let vida = 100;
-const barraJugador = document.getElementById("vida-jugador");
+const barraJugador = document.getElementById("vida_player");
 vidaJugador -= 20; // por ejemplo
 barraJugador.style.width = vidaJugador + "%";
 vidaJugador += 10;
