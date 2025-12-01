@@ -120,32 +120,36 @@ header {
 
 .sectionBattle__scene{
     width: 100%;
-    height: 50%;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .sectionBattle__scene--img{
-    width: 70%;
+    width: 90%;
     height: 100%;
 }
 
 .sectionBattle__options{
-    background-image: url(imagenes/opciones_batalla.jpg);
-    background-repeat: no-repeat;
-    background-size:contain;
     width: 50%;
     height: 30%;
     display: flex;
-    justify-content: end;
-    
-    
+    justify-content: center;
+}
+
+.sectionBattle__optionsInfo{
+    background-image: url(fotos/battle_options.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 60%;
 }
 
 .sectionBattle__optionsChoose{
 
-    width: 52%;
+    width: 100%;
     height: 57%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -160,7 +164,7 @@ header {
 
 .a1{
     grid-area: uno;
-    width: 200px;
+    width: auto;
     height: auto; 
     border-radius: 15px;
     display: flex;
@@ -170,7 +174,7 @@ header {
 }
 .a2{
     grid-area: dos;
-    width: 200px;
+    width: auto;
     height: auto; 
     border-radius: 15px;
     display: flex;
@@ -180,7 +184,7 @@ header {
 }
 .a3{
     grid-area: tres;
-    width: 200px;
+    width: auto;
     height: auto; 
     border-radius: 15px;
     display: flex;
@@ -190,7 +194,7 @@ header {
 }
 .a4{
     grid-area: cuatro;
-    width: 200px;
+    width: auto;
     height: auto; 
     border-radius: 15px;
     display: flex;
@@ -200,25 +204,25 @@ header {
 }
 
 .a1__img{
-    width: 200px;
+    width: 100%;
     height: 70px; 
     border-radius: 15px;
 }
 
 .a2__img{
-    width: 200px;
+    width: 100%;
     height: 70px; 
     border-radius: 15px;
 }
 
 .a3__img{
-    width: 200px;
+    width: 100%;
     height: 70px; 
     border-radius: 15px;
 }
 
 .a4__img{
-    width: 200px;
+    width: 100%;
     height: 70px; 
     border-radius: 15px;
 }
@@ -227,7 +231,7 @@ header {
 
 /*Vida de .vida-contenedor*/
 
-.vida-contenedor{
+.vida_container{
   width: 200px;
   height: 20px;
   background-color: #444; /* color de fondo */
@@ -235,7 +239,7 @@ header {
   overflow: hidden; /* para que el borde redondeado afecte al interior */
 }
 
-.vida {
+.life {
   width: 100%;        /* empieza al 100% */
   height: 100%;
   background-color: green;
