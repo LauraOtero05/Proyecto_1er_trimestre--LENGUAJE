@@ -154,6 +154,10 @@ header {
     font-size: 50px;
 }
 
+.main__title--Shadow{
+    text-shadow: 2px 2px #000;
+}
+
 .main__subtitle {
     font-family: "Jersey 10", "Pixelify Sans", "Montserrat", Arial, Helvetica, sans-serif;
     font-size: 30px;
@@ -487,4 +491,68 @@ footer {
     grid-area: d;
     object-fit: cover;
     overflow: hidden;
+}
+
+/* EVOLUTION */
+
+.body__evolution{
+    margin: 0 auto;
+    padding: 0px;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.chest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(fotos/fondo_Bosque.png);
+    background-color: rgb(187, 185, 185);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    margin-bottom: -30px;
+    padding: 50px;
+}
+
+.chest__box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.chest__img{
+    height: 330px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 10%;
+    padding: 20px;
+}
+
+.chest__containText{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    
+}
+
+.evolution{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.evolution__img{
+    height: 250px;
+    width: 450px;
+    object-fit: cover;
+    border-radius: 10%;
+    padding: 20px;
 }
