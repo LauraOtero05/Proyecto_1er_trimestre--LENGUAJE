@@ -5,7 +5,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // Leer selección guardada
-    const seleccionado = localStorage.getItem("objetoSeleccionado");
+    const seleccionado = sessionStorage.getItem("objetoSeleccionado");
 
     // Ocultar todos
     document.querySelectorAll(".dropdown__item")
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         pokemon.addEventListener('click', () => {
             const nombre = pokemon.nextElementSibling.querySelector('.pokemon__h1').textContent;
 
-            localStorage.setItem('pokemonSeleccionado', nombre);
+            sessionStorage.setItem('pokemonSeleccionado', nombre);
 
             pantallaPokemon.style.display = 'none';
             pantallaInventario.style.display = 'flex';
@@ -91,17 +91,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     //Elección de la imagen del objeto
-    const objetos = document.querySelectorAll('.initial__object');
+    const objetos = document.querySelectorAll('.inventory__img');
 
     // Guardado del inventario en la mochila
     objetos.forEach(obj => {
-    obj.addEventListener('click', () => {
-        const nombre = obj.querySelector('.inventory__h1').textContent;
+        obj.addEventListener('click', () => {
+            const nombre = obj.closest('.select__object').querySelector('.inventory__h1').textContent;
 
-        localStorage.setItem('objetoSeleccionado', nombre);
+            sessionStorage.setItem('objetoSeleccionado', nombre);
 
-        mostrarObjetoEnDropdown(nombre);
-    });
+            mostrarObjetoEnDropdown(nombre);
+        });
     });
 
 /*ACTUALIZAR INVENTARIO Y POKEMONS*/
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function mostrarPokemonEnDropdown() {
     const pokeballNav = document.querySelectorAll('.nav')[0];
     const dropdownPokemon = pokeballNav.querySelector('.dropdown');
-    const nombre = localStorage.getItem('pokemonSeleccionado');
+    const nombre = sessionStorage.getItem('pokemonSeleccionado');
 
     // Limpiar contenido previo
     dropdownPokemon.innerHTML = '';
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function mostrarObjetoEnDropdown() {
     const mochilaNav = document.querySelectorAll('.nav')[1];
     const dropdownObjeto = mochilaNav.querySelector('.dropdown--grid');
-    const nombre = localStorage.getItem('objetoSeleccionado');
+    const nombre = sessionStorage.getItem('objetoSeleccionado');
 
     // Limpiar contenido previo
     dropdownObjeto.innerHTML = '';
@@ -158,4 +158,3 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarPokemonEnDropdown();
         mostrarObjetoEnDropdown();
     });
-
