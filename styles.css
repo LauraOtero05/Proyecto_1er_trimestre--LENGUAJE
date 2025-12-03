@@ -1,11 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
 
-body{
-    margin: 0 auto;
-    box-sizing: border-box;
-    font-family: "Pixelify Sans", sans-serif;
-    background-color: black;
+/* Todas las cajas del juego iguales */
+
+.game__box{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: rgba(241, 241, 241, 0.896);
+    box-shadow:
+    0 0 0 15px rgb(109, 109, 109),
+    0 0 0 18px yellow,
+    0 0 0 23px rgb(109, 109, 109);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
+
+.game__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(109, 109, 109);
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px;
+
+}
+
+.game__buttonText{
+    text-decoration: none;
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 18px;
+}
+
 
 /*HEADER*/
 
@@ -86,6 +119,7 @@ header {
 .dropdown__item {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
     color: white;
 }
@@ -118,13 +152,16 @@ header {
 /*TEXT*/
 
 .main__title {
-    font-family: "Jersey 10", "Pixelify Sans", "Montserrat", Arial, Helvetica, sans-serif;
+    font-family: "Pixelify Sans", "Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
     font-size: 50px;
-    font-weight: 100;
+}
+
+.main__title--Shadow{
+    text-shadow: 2px 2px #000;
 }
 
 .main__subtitle {
-    font-family: "Jersey 10", "Pixelify Sans", "Montserrat", Arial, Helvetica, sans-serif;
+    font-family: "Pixelify Sans", "Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
     font-size: 30px;
     font-weight: 100;
 }
@@ -154,6 +191,7 @@ footer {
     align-items: start;
     width: 100%;
     margin-top: 30px;
+    position: relative;
 }
 
 .footer__group{
@@ -205,6 +243,164 @@ footer {
 
 .footer__icon {
     width: 40px;
+}
+
+/* HOMEPAGE */
+.body__homepage{
+    display: flex;
+    flex-direction: column;
+    font-family: "Pixelify Sans", sans-serif;
+    min-height: 100vh;
+    background-image: url(https://i.pinimg.com/originals/e6/2e/83/e62e8349d3b94b765ba7d10f01a3ff38.gif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.video__background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 50%;
+}
+
+.start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.game__box--Bottom{
+    position: absolute;
+    bottom:80px;
+}
+
+/* POKEMON SELECT */
+
+.body__pokemonSelect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 100%;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.game__box--Top{
+    position: relative;
+    top: 120px;
+}
+
+.screen__PokemonSelect,
+.screen__InvenSelect{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 240px;
+}
+
+/*Activar o desactivar para hacer pruebas en la pantalla de inventario*/
+/* .screen__PokemonSelect{
+    display: none;
+} */
+
+.screen__InvenSelect{
+    display: none;
+}
+
+.background__PokemonSelect,
+.background__InvenSelect{
+    position: absolute;
+    width: 100%;
+    object-position: center bottom;
+    opacity: 80%;
+}
+
+.track__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.track__box--Hidden{
+    display: none;
+    font-family: "Jersey 10", "Pixelify Sans", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.track__box:hover .track__box--Hidden{
+    display: block;
+}
+
+.selected{
+    position: relative;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pokemon__box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 180px;
+}
+
+.pokemon__img{
+    width: 350px;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+}
+
+.pokemon__img:hover{
+    transform: scale(1.2);
+}
+
+.pokemon__h1{
+    font-size: 25px;
+}
+
+.inventory__box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.inventory__img{
+    width: 200px;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+}
+
+.inventory__img:hover{
+    transform: scale(1.2);
+}
+
+.inventory__h1{
+    font-size: 25px;
+}
+
+.initial__object{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
 }
 
 /*CHOOSE ROUTE*/
@@ -305,61 +501,189 @@ footer {
     overflow: hidden;
 }
 
-/*WATER ROUTE*/
+/* EVOLUTION */
 
-/*BODY*/
-
-.water__body {
-    background-color: rgb(174, 174, 174);
-    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/024/649/105/small/pattern-pokeball-red-and-white-ball-of-the-popular-cartoon-90s-pixel-art-free-vector.jpg);
-    background-size: cover;
-    background-blend-mode: multiply;
-    margin: 0px;
+.body__evolution{
+    margin: 0 auto;
     padding: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
+    overflow-x: hidden;
 }
 
-.water{
-    width: 80%;
-}
-
-.water__img{
-    width: 80%;
-    object-fit: contain;
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: black;
-}
-
-.water__bottom{
+.chest{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.water__history{
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-image: url(fotos/fondo_Bosque.png);
+    background-color: rgb(187, 185, 185);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    margin-bottom: -30px;
+    padding: 50px;
 }
 
-
-/*puedo hacer  q se abran con un hover ??????*/
-
-.water__options{
-    height: 20%;
+.chest__box{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.water__option{
+.chest__img{
+    height: 330px;
+    width: 500px;
     object-fit: cover;
-    text-decoration: none;
+    border-radius: 10%;
+    padding: 20px;
+}
+
+.chest__containText{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    
+}
+
+.evolution{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.evolution__img{
+    height: 250px;
+    width: 450px;
+    object-fit: cover;
+    border-radius: 10%;
+    padding: 20px;
+}
+
+
+/* Final Neutral */
+
+.body__Neutral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+.history{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: -30px;
+    background-image: url(fotos/Fondo_pokemons_lateral.jpg);
+    background-color: rgb(187, 185, 185);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.history__title{
+    font-family: "Pixelify Sans", "Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 70px;
+}
+
+.history__subtitle{
+    font-family: "Pixelify Sans", "Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+.history__text{
+    font-family:"Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.history__text--G{
+    font-family:"Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+
+.history__box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "a a"
+    "b b"
+    "c d"
+    "e e"
+    "f f"
+    ;
+    padding: 80px;
+    padding-top: 0;
+    place-items: center;
+    margin-bottom: -30px;
+    gap: 15px;
+
+}
+
+.justify{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history__img{
+    object-fit: cover;
+    width: 600px;
+    height: 200px;
+
+}
+
+.game__box--measures{
+    width: 590px;
+    height: 385px;
+}
+
+.game__box--width{
+    width: 1270px;
+
+}
+
+
+.history__Grid--A{
+    grid-area: a;
+}
+
+
+.history__Grid--B{
+    grid-area: b;
+    padding-bottom: 70px;
+}
+
+.history__Grid--C{
+    grid-area: c;
+    padding-bottom: 70px;
+} 
+
+.history__Grid--D{
+    grid-area: d;
+    padding-bottom: 70px;
+    
+}
+
+.history__Grid--E{
+    grid-area: e;
+    padding-bottom: 70px;
+}
+
+.history__Grid--F{
+    grid-area: f;
 }
