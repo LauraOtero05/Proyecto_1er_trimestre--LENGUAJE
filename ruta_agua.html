@@ -1,134 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lago Ilusorio</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
-<body class="water__body">
-    <header>
-        <img class="header__logo" src="fotos/Pokémon_logo.png" alt="Logo de Pokemon">
-        <div class="header__icons">
+    <body class="water__body">
+        <header>
+            <img class="header__logo" src="fotos/Pokémon_logo.png" alt="Logo de Pokemon">
+            <div class="header__icons">
+                <a href="">
+                    <img class="header__icon--bigger" src="fotos/icon_casa.png" alt="Icono de una casa blanca">
+                </a>
+                <div class="nav">
+                    <img class="header__icon" src="fotos/icon_pokeball.png" alt="Icono de una pokeball blanca">
+                    <div class="dropdown" role="menu" aria-hidden="true">
+                        <div class="dropdown__item pokemon--1" role="menuitem">
+                            <p class="main__text main__text--white nav__text">Prueba</p>
+                        </div>
+                        <div class="dropdown__item pokemon--2" role="menuitem">
+                            <p class="main__text main__text--white nav__text">Prueba</p>
+                        </div>
+                        <div class="dropdown__item pokemon--3" role="menuitem">
+                            <p class="main__text main__text--white nav__text">Prueba</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <img class="header__icon" src="fotos/icon_mochila.png" alt="Icono de una mochila blanca">
+                    <div class="dropdown dropdown--grid" role="menu" aria-hidden="true">
+                        <div class="dropdown__item" role="menuitem">
+                            <img src="" alt="">
+                            <p class="main__text main__text--white nav__text">Prueba</p>
+                        </div>
+                        <div class="dropdown__item" role="menuitem">
+                            <img src="" alt="">
+                            <p class="main__text main__text--white nav__text">Prueba</p>
+                        </div>
+                        <div class="dropdown__item" role="menuitem">
+                            <img src="" alt="">
+                            <p class="main__text main__text--white nav__text">Prueba</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </header>
+        <section class="water">
+            <div class="water__history">
+                <h1 class="main__title">Llegas al lago</h1>
+                <p class="main__text">Al avanzar por el camino del Lago Ilusorio, el bosque se abre y deja ver un lago
+                    de aguas tan claras que parece irreal. La superficie refleja el cielo como si fuera un espejo
+                    perfecto, aunque hay algo extraño en él… como si el reflejo tardara un segundo en seguir tus
+                    movimientos. <br> A un lado del lago, el agua proyecta una figura que no reconoces del todo, un reflejo
+                    que parece llamarte. <br> Más adelante, entre los árboles que rodean el lago, se mueven unas sombras
+                    alargadas, casi familiares, que se deslizan sin hacer ruido. <br> Y al observar el centro del lago, parece que podría cruzarse nadando, aunque no estás seguro de si
+                    tu Pokémon podrá seguir tu ritmo o si será demasiado peligroso... 
+                </p>
+            </div>
             <a href="">
-                <img class="header__icon--bigger" src="fotos/icon_casa.png" alt="Icono de una casa blanca">
+                <div class="water__option water__option--a">
+                    <img class="water__option__img" src="fotos/reflejos.png" alt="">
+                    <h3 class="main__subtitle main__subtitle--white water__option__txt">Reflejos en el Lago</h3>
+                </div>
             </a>
-            <div class="nav">
-                <img class="header__icon" src="fotos/icon_pokeball.png" alt="Icono de una pokeball blanca">
-                <div class="dropdown" role="menu" aria-hidden="true">
-                    <div class="dropdown__item pokemon--1" role="menuitem">
-                        <p class="main__text main__text--white nav__text">Prueba</p>
-                    </div>
-                    <div class="dropdown__item pokemon--2" role="menuitem">
-                        <p class="main__text main__text--white nav__text">Prueba</p>
-                    </div>
-                    <div class="dropdown__item pokemon--3" role="menuitem">
-                        <p class="main__text main__text--white nav__text">Prueba</p>
-                    </div>
+            <a href="ruta_agua.html">
+                <div class="water__option water__option--b">
+                    <img class="water__option__img" src="fotos/sombras.png" alt="">
+                    <h3 class="main__subtitle main__subtitle--white water__option__txt">Sombras del Bosque</h3>
                 </div>
-            </div>
-            <div class="nav">
-                <img class="header__icon" src="fotos/icon_mochila.png" alt="Icono de una mochila blanca">
-                <div class="dropdown dropdown--grid" role="menu" aria-hidden="true">
-                    <div class="dropdown__item" role="menuitem">
-                        <img src="" alt="">
-                        <p class="main__text main__text--white nav__text">Prueba</p>
-                    </div>
-                    <div class="dropdown__item" role="menuitem">
-                        <img src="" alt="">
-                        <p class="main__text main__text--white nav__text">Prueba</p>
-                    </div>
-                    <div class="dropdown__item" role="menuitem">
-                        <img src="" alt="">
-                        <p class="main__text main__text--white nav__text">Prueba</p>
-                    </div>
+            </a>
+            <a href="">
+                <div class="water__option water__option--c">
+                    <img class="water__option__img" src="fotos/lago.png" alt="">
+                    <h3 class="main__subtitle main__subtitle--white water__option__txt">Cruzar nadando</h3>
                 </div>
-            </div>
-        </div>
-        </div>
-    </header>
-    <section class="water">
-        <div class="water__item">
-            <img class="water__img" src="" alt="">
-            <div class="water__bottom">
-                <div class="water__history">
-                    <h1 class="main__title">
-                        Eliges el camino del lago
-                    </h1>
-                    <p class="main__text">Continuas tu camino en dirección hacia el lago</p>
-                </div>
-                <div class="water__options">
-                    <a class="water__option" href="">
-                        <p class="main__text">Reflejos</p>
+            </a>
+        </section>
+        <footer>
+            <div class="footer__group">
+                <div class="footer__column">
+                    <img class="footer__logo" src="fotos/The_Pokemon_Company_White.png"
+                        alt="Logo de The Pokemon Company">
+                    <a class="footer__text--link" href="https://www.pokemon.com/es/noticias-pokemon">
+                        <p class="footer__text footer__text--white">Novedades</p>
                     </a>
-                    <a class="water__option" href="">
-                        <p class="main__text">Bosque</p>
+                    <a class="footer__text--link" href="https://parents.pokemon.com/es-es/">
+                        <p class="footer__text footer__text--white">Guía para padres y tutores</p>
                     </a>
-                    <a class="water__option" href="">
-                        <p class="main__text">Nadar</p>
+                    <a class="footer__text--link" href="https://support.pokemon.com/hc/es">
+                        <p class="footer__text footer__text--white">Servicio de atención al cliente</p>
+                    </a>
+                    <a class="footer__text--link" href="https://corporate.pokemon.com/es-es/">
+                        <p class="footer__text footer__text--white">Sobre nuestra compañía</p>
+                    </a>
+                    <a class="footer__text--link" href="https://pokemon.gamespress.com/es">
+                        <p class="footer__text footer__text--white">Sitio de prensa</p>
                     </a>
                 </div>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="footer__group">
-            <div class="footer__column">
-                <img class="footer__logo" src="fotos/The_Pokemon_Company_White.png" alt="Logo de The Pokemon Company">
-                <a class="footer__text--link" href="https://www.pokemon.com/es/noticias-pokemon">
-                    <p class="footer__text footer__text--white">Novedades</p>
-                </a>
-                <a class="footer__text--link" href="https://parents.pokemon.com/es-es/">
-                    <p class="footer__text footer__text--white">Guía para padres y tutores</p>
-                </a>
-                <a class="footer__text--link" href="https://support.pokemon.com/hc/es">
-                    <p class="footer__text footer__text--white">Servicio de atención al cliente</p>
-                </a>
-                <a class="footer__text--link" href="https://corporate.pokemon.com/es-es/">
-                    <p class="footer__text footer__text--white">Sobre nuestra compañía</p>
-                </a>
-                <a class="footer__text--link" href="https://pokemon.gamespress.com/es">
-                    <p class="footer__text footer__text--white">Sitio de prensa</p>
-                </a>
-            </div>
-            <div class="footer__column">
-                <div class="footer__icons">
-                    <a href="https://www.facebook.com/PokemonOficialES">
-                        <img class="footer__icon" src="fotos/icon-facebook.png" alt="Logo de Facebook">
+                <div class="footer__column">
+                    <div class="footer__icons">
+                        <a href="https://www.facebook.com/PokemonOficialES">
+                            <img class="footer__icon" src="fotos/icon-facebook.png" alt="Logo de Facebook">
+                        </a>
+                        <a href="https://www.youtube.com/user/PokemonOficialES">
+                            <img class="footer__icon" src="fotos/icon-youtube.png" alt="Logo de Youtube">
+                        </a>
+                        <a href="https://x.com/Pokemon_ES_ESP">
+                            <img class="footer__icon" src="fotos/icon-twitter.png" alt="Logo de Twitter">
+                        </a>
+                        <a href="https://www.instagram.com/PokemonESP">
+                            <img class="footer__icon" src="fotos/icon-instagram.png" alt="Logo de Instagram">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <a href="https://www.pokemon.com/es/legal/aviso-de-privacidad">
+                        <img class="footer__img" src="fotos/coppa_safe_harbor.png" alt="Logo de Coppa Safe Harbor">
                     </a>
-                    <a href="https://www.youtube.com/user/PokemonOficialES">
-                        <img class="footer__icon" src="fotos/icon-youtube.png" alt="Logo de Youtube">
+                    <a class="footer__text--link" href="https://www.pokemon.com/es/legal/condiciones-de-uso">
+                        <p class="footer__text footer__text--white">Condiciones de uso</p>
                     </a>
-                    <a href="https://x.com/Pokemon_ES_ESP">
-                        <img class="footer__icon" src="fotos/icon-twitter.png" alt="Logo de Twitter">
+                    <a class="footer__text--link" href="https://www.pokemon.com/es/legal/aviso-de-privacidad">
+                        <p class="footer__text footer__text--white">Aviso de privacidad</p>
                     </a>
-                    <a href="https://www.instagram.com/PokemonESP">
-                        <img class="footer__icon" src="fotos/icon-instagram.png" alt="Logo de Instagram">
+                    <a class="footer__text--link" href="https://www.pokemon.com/es/legal/pagina-de-cookies">
+                        <p class="footer__text footer__text--white">Página de Cookies</p>
+                    </a>
+                    <a class="footer__text--link" href="https://www.pokemon.com/es/legal/informacion">
+                        <p class="footer__text footer__text--white">Infromación legal </p>
                     </a>
                 </div>
             </div>
-            <div class="footer__column">
-                <a href="https://www.pokemon.com/es/legal/aviso-de-privacidad">
-                    <img class="footer__img" src="fotos/coppa_safe_harbor.png" alt="Logo de Coppa Safe Harbor">
-                </a>
-                <a class="footer__text--link" href="https://www.pokemon.com/es/legal/condiciones-de-uso">
-                    <p class="footer__text footer__text--white">Condiciones de uso</p>
-                </a>
-                <a class="footer__text--link" href="https://www.pokemon.com/es/legal/aviso-de-privacidad">
-                    <p class="footer__text footer__text--white">Aviso de privacidad</p>
-                </a>
-                <a class="footer__text--link" href="https://www.pokemon.com/es/legal/pagina-de-cookies">
-                    <p class="footer__text footer__text--white">Página de Cookies</p>
-                </a>
-                <a class="footer__text--link" href="https://www.pokemon.com/es/legal/informacion">
-                    <p class="footer__text footer__text--white">Infromación legal </p>
-                </a>
-            </div>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+
+    </html>
 </body>
 
 </html>
