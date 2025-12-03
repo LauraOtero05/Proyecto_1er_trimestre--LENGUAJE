@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
 /* Todas las cajas del juego iguales */
 
 .game__box{
@@ -150,7 +152,7 @@ header {
 /*TEXT*/
 
 .main__title {
-    font-family: "Jersey 10", "Pixelify Sans", "Montserrat", Arial, Helvetica, sans-serif;
+    font-family: "Pixelify Sans", "Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
     font-size: 50px;
 }
 
@@ -159,7 +161,7 @@ header {
 }
 
 .main__subtitle {
-    font-family: "Jersey 10", "Pixelify Sans", "Montserrat", Arial, Helvetica, sans-serif;
+    font-family: "Pixelify Sans", "Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
     font-size: 30px;
 }
 
@@ -555,4 +557,127 @@ footer {
     object-fit: cover;
     border-radius: 10%;
     padding: 20px;
+}
+
+
+/* Final Neutral */
+
+.body__Neutral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+.history{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: -30px;
+    background-image: url(fotos/Fondo_pokemons_lateral.jpg);
+    background-color: rgb(187, 185, 185);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.history__title{
+    font-family: "Pixelify Sans", "Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 70px;
+}
+
+.history__subtitle{
+    font-family: "Pixelify Sans", "Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+.history__text{
+    font-family:"Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.history__text--G{
+    font-family:"Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+
+.history__box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "a a"
+    "b b"
+    "c d"
+    "e e"
+    "f f"
+    ;
+    padding: 80px;
+    padding-top: 0;
+    place-items: center;
+    margin-bottom: -30px;
+    gap: 15px;
+
+}
+
+.justify{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history__img{
+    object-fit: cover;
+    width: 600px;
+    height: 200px;
+
+}
+
+.game__box--measures{
+    width: 590px;
+    height: 385px;
+}
+
+.game__box--width{
+    width: 1270px;
+
+}
+
+
+.history__Grid--A{
+    grid-area: a;
+}
+
+
+.history__Grid--B{
+    grid-area: b;
+    padding-bottom: 70px;
+}
+
+.history__Grid--C{
+    grid-area: c;
+    padding-bottom: 70px;
+} 
+
+.history__Grid--D{
+    grid-area: d;
+    padding-bottom: 70px;
+    
+}
+
+.history__Grid--E{
+    grid-area: e;
+    padding-bottom: 70px;
+}
+
+.history__Grid--F{
+    grid-area: f;
 }

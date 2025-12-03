@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Guardado del inventario en la mochila
     objetos.forEach(obj => {
         obj.addEventListener('click', () => {
-            const nombre = obj.closest('.select__object').querySelector('.inventory__h1').textContent;
+            const nombre = obj.closest('.initial__object').querySelector('.inventory__h1').textContent;
 
             sessionStorage.setItem('objetoSeleccionado', nombre);
 
@@ -112,15 +112,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const nombre = sessionStorage.getItem('pokemonSeleccionado');
 
     // Limpiar contenido previo
-    dropdownPokemon.innerHTML = '';
+    // dropdownPokemon.innerHTML = '';
 
     if (nombre) {
         // Crear item con el nombre del Pokémon
         const item = document.createElement('div');
         item.classList.add('dropdown__item');
 
-        item.innerHTML = `<p class="main__text main__text--white nav__text">${nombre}</p>`; //Muestra el nombre del pokemon
-        item.innerHTML = `<img src="${pokemonImages[nombre]}" alt="${nombre}"><p>${nombre}</p>`; //Muestra la imagen del pokemon
+        item.innerHTML = `<img src="${pokemonImages[nombre]}" alt="${nombre}"><p class="main__text main__text--white nav__text">${nombre}</p>`;
 
         dropdownPokemon.appendChild(item);
         dropdownPokemon.classList.add('show'); // mostrar dropdown
@@ -136,15 +135,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const nombre = sessionStorage.getItem('objetoSeleccionado');
 
     // Limpiar contenido previo
-    dropdownObjeto.innerHTML = '';
+    // dropdownObjeto.innerHTML = '';
 
     if (nombre) {
         // Crear item con el objeto
         const item = document.createElement('div');
         item.classList.add('dropdown__item');
 
-        item.innerHTML = `<p class="main__text main__text--white nav__text">${nombre}</p>`;
-        item.innerHTML = `<img src="${objetImages[nombre]}" alt="${nombre}"><p>${nombre}</p>`;
+        item.innerHTML = `<img src="${objetImages[nombre]}" alt="${nombre}"><p class="main__text main__text--white nav__text">${nombre}</p>`;
 
         dropdownObjeto.appendChild(item);
         dropdownObjeto.classList.add('show'); // mostrar dropdown
