@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RutaFuego</title>
+        <link rel="stylesheet" href="css.css">
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    </head>
+    <body class="bodyFuego">
+        <main class="main_fuego">
+                <div class="dialogo_container">
+                    <div class="dialogo_box">
+                        <div class="dialogo_contenido">
+                            <span>BIENVENIDO AL CAMINO DE SOMBRA</span>
+                            <span>Te encuentras rodeado de sombras que intentarán atacarte.</span>
+                            <span>Tienes 3 opciones, decide que quieres hacer.</span>
+                            <span>Pero cuidado. Si tomas una mala eleccion perderas.</span>
+                            <span>¿Aceptas el desafío?</span>
+                            <button id="btn_acepto">Acepto</button>
+                        </div>
+                        <img class="dialogo_imagen" src="dialogo.png">
+                    </div>
+                </div>
+            </main>
+            <main class="main_opciones">
+                <div class="eleccion_container oculto">
+                    <div class="eleccion_box">
+                        <div class="eleccion_contenido">
+                            <div class="opcion">
+                                <button class="btn_opcion" id="btn_atacar">Atacar</button>
+                                <span class="texto_opcion">Vulpix ataca a las sombras</span>
+                                <div class="confirmacion_box">
+                                    <span>¿Que quieres hacer?</span>
+                                    <div class="confirmacion_botones">
+                                        <button id="btn_atacar--llamarada" class="btn_confirmacion">Llamarada</button>
+                                        <button id="btn_atacar--placaje" class="btn_confirmacion">Placaje</button>
+                                        <button id="btn_atacar--no" class="btn_confirmacion">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="opcion">
+                                <button class="btn_opcion" id="btn_linterna">Linterna</button>
+                                <span class="texto_opcion">Las sombras se disipan</span>
+                                <div class="confirmacion_box">
+                                    <span>¿Estas seguro que quieres usar la linterna?</span>
+                                    <div class="confirmacion_botones">
+                                        <button id="btn_linterna--si" class="btn_confirmacion">Usar linterna</button>
+                                        <button id="btn_linterna--no" class="btn_confirmacion">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="opcion">
+                                <button class="btn_opcion" id="btn_huir">Huir</button>
+                                <span class="texto_opcion">Huyes de las sombras</span>
+                                <div class="confirmacion_box">
+                                    <span>¿Estas seguro que quieres huir?</span>
+                                    <div class="confirmacion_botones">
+                                        <button id="btn_huir--si" class="btn_confirmacion">Huir</button>
+                                        <button id="btn_huir--no" class="btn_confirmacion">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vida_container">
+                                <div class="vidaPokemon" id="vidaPokemon">110/110</div>
+                                <div class="vida_barra">
+                                    <div class="vida_fill" id="vidaFill"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="dialogo_imagen" src="dialogo.png">
+                    </div>
+                </div>
+            </main>
+            <main class="main_victoria oculto" id="victoria">
+                <div class="main_victoria_box">
+                    <span>Has vencido a las sombras</span>
+                    <span>Recoge tu recompensa</span>
+                    <button id="btn_Recoger">Recoger</button>
+                </div>
+                <div class="main_victoria_recompensa">
+                    <img class="main_victoria_recompensa--pocion_Curacion" src="Poción_Curacion.png" alt="">
+                    <img class="main_victoria_recompensa--piedra_Evolutiva" src="Piedra_Fuego.png" alt="">
+                    <img class="main_victoria_recompensa--pokeball" src="Pokeball.png" alt="">
+                </div>
+            </main>
+            <script src="RutaFuego.js"></script>
+    </body>
+</html>
