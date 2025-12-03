@@ -408,8 +408,8 @@ footer {
 /*BODY*/
 
 .routes__body {
-    background-color: rgb(174, 174, 174);
-    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/024/649/105/small/pattern-pokeball-red-and-white-ball-of-the-popular-cartoon-90s-pixel-art-free-vector.jpg);
+    background-color: rgb(222, 222, 222);
+    background-image: url(fotos/imagen_caminosA.png);
     background-size: cover;
     background-blend-mode: multiply;
     margin: 0px;
@@ -418,21 +418,18 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 /*ROUTES*/
 
 .routes {
     width: 75%;
-    margin-top: 300px;
-    display: grid;
-    grid-template-columns: repeat(autofit, minmax (150, 1fr));
-    grid-template-rows: repeat(autofit, minmax (150, 1fr));
-    grid-gap: 30px;
-    grid-template-areas:
-        'a a a'
-        'b c d';
+    margin-top: 100px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .routes__history {
@@ -440,13 +437,26 @@ footer {
     padding: 10px;
     text-align: justify;
     border-radius: 10px;
-    grid-area: a;
     text-align: center;
+}
+
+.routes__item{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.routes__text{
+    background-color: rgb(106, 106, 106, 0.75);
+    padding: 20px;
+    text-align: justify;
+    border-radius: 10px;
 }
 
 .routes__option__img {
     border-radius: 10px;
-    width: 100%;
+    width: 50%;
     object-fit: cover;
     overflow: hidden;
     display: block;
@@ -483,19 +493,97 @@ footer {
         max-height 260ms cubic-bezier(.2, .9, .2, 1);
 }
 
-.routes__option--b {
+/*WATER ROUTE*/
+
+/*BODY*/
+
+.water__body {
+    background-color: rgb(222, 222, 222);
+    background-image: url(fotos/lago.png);
+    background-size: cover;
+    background-position: bottom;
+    background-blend-mode: multiply;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.water{
+    width: 75%;
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax (150, 1fr));
+    grid-template-rows: repeat(autofit, minmax (150, 1fr));
+    grid-gap: 30px;
+    grid-template-areas:
+        'a a a'
+        'b c d';
+}
+
+.water__history{
+    background-color: rgb(106, 106, 106, 0.75);
+    padding: 10px;
+    text-align: justify;
+    border-radius: 10px;
+    grid-area: a;
+    text-align: center;
+}
+
+.water__option__img {
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    display: block;
+}
+
+.water__option {
+    background-color: rgb(106, 106, 106, 0.75);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.water__option__txt {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    opacity: 0;
+}
+
+.water__option:hover .water__option__txt {
+    opacity: 1;
+    transition:
+        opacity 200ms ease,
+        transform 180ms ease,
+        max-height 260ms cubic-bezier(.2, .9, .2, 1);
+}
+
+.water__option--b {
     grid-area: b;
     object-fit: cover;
     overflow: hidden;
 }
 
-.routes__option--c {
+.water__option--c {
     grid-area: c;
     object-fit: cover;
     overflow: hidden;
 }
 
-.routes__option--d {
+.water__option--d {
     grid-area: d;
     object-fit: cover;
     overflow: hidden;
@@ -552,7 +640,7 @@ footer {
 
 .evolution{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 50px;
 }
@@ -638,6 +726,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .history__img{
