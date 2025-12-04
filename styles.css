@@ -187,6 +187,8 @@ header {
 
 footer {
     background-color: rgb(50, 50, 50);
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -423,20 +425,11 @@ footer {
 
 .routes {
     width: 75%;
-    margin-top: 100px;
+    margin-top: 130px;
     gap: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.routes__history {
-    background-color: rgb(106, 106, 106, 0.75);
-    padding: 10px;
-    text-align: justify;
-    border-radius: 10px;
-    text-align: center;
 }
 
 .routes__item{
@@ -455,7 +448,7 @@ footer {
 
 .routes__option__img {
     border-radius: 10px;
-    width: 50%;
+    width: 40%;
     object-fit: cover;
     overflow: hidden;
     display: block;
@@ -463,6 +456,7 @@ footer {
 
 .routes__option {
     background-color: rgb(106, 106, 106, 0.75);
+        width: 40%;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -490,6 +484,10 @@ footer {
         opacity 200ms ease,
         transform 180ms ease,
         max-height 260ms cubic-bezier(.2, .9, .2, 1);
+}
+
+.routes__txt{
+    width: 1000px;
 }
 
 /*WATER ROUTE*/
@@ -523,13 +521,7 @@ footer {
 }
 
 .water__history{
-    background-color: rgb(106, 106, 106, 0.75);
-    padding: 10px;
-    text-align: justify;
-    border-radius: 10px;
-    grid-area: a;
-    text-align: center;
-}
+    grid-area: a;}
 
 .water__option__img {
     border-radius: 10px;
