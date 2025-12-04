@@ -156,3 +156,472 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarPokemonEnDropdown();
         mostrarObjetoEnDropdown();
     });
+
+
+// ||||||| RUTA VENENO |||||||
+
+// ELEMENTOS
+const palabras = ["pokeball", "ataque", "pesadilla", "veneno", "entrenador","pokemon", "destino", "rutas", "nivel", "evolucion","tipo", "fuego", "agua", "planta", "sombra","camino", "oscuridad", "vulpix", "nidoran", "starmie"];
+
+let palabra = "";
+let oculta = [];
+let vidaPokemon = 110;
+let vidas = 3;
+
+const hueco = document.getElementById("palabra");
+const btnAcepto = document.getElementById("btn_acepto");
+const dialogoContainer = document.querySelector(".dialogo_container");
+const ahorcadoMain = document.querySelector(".ahorcado_main");
+const mainVictoria = document.querySelector(".main_victoria");
+const btnRecoger = document.getElementById("btn_recoger");
+
+// INICIAR AHORCADO
+btnAcepto?.addEventListener("click", () => {
+    if(dialogoContainer) dialogoContainer.style.display = "none";
+    inicio();
+});
+
+// INICIO DEL JUEGO
+function inicio() {
+    vidas = 3;
+    vidaPokemon = 110;
+    actualizarVidasUI();
+    actualizarBarraVida();
+    generaPalabra();
+    pintarGuiones();
+    generaABC("a", "z");
+
+    // Resetear victoria y botones
+    if(mainVictoria) {
+        mainVictoria.style.display = "none";
+        mainVictoria.classList.remove("mostrar");
+    }
+    if(btnRecoger) btnRecoger.disabled = true;
+
+    // Mostrar ahorcado
+    if(ahorcadoMain) {
+        ahorcadoMain.classList.remove("oculto");
+        ahorcadoMain.classList.add("mostrar");
+    }
+}
+
+// GENERAR PALABRA
+function generaPalabra() {
+    const rand = Math.floor(Math.random() * palabras.length);
+    palabra = palabras[rand].toUpperCase();
+}
+
+// ACTUALIZAR VIDAS
+function actualizarVidasUI() {
+    const contenedorVidas = document.getElementById("vidas");
+    if (!contenedorVidas) return;
+    contenedorVidas.innerHTML = "";
+    for (let i = 0; i < vidas; i++) {
+        contenedorVidas.innerHTML += "<img src='fotos/hardcore-heart.png' alt='vida' class='icono_vida'>";
+    }
+}
+
+// PINTAR GUIONES
+function pintarGuiones() {
+    oculta = Array(palabra.length).fill("_");
+    if(hueco) hueco.innerHTML = oculta.join(" ");
+}
+
+// GENERAR ABC
+function generaABC(a, z) {
+    const abcdario = document.getElementById("abcdario");
+    if(!abcdario) return;
+    abcdario.innerHTML = "";
+    const iStart = a.charCodeAt(0);
+    const iEnd = z.charCodeAt(0);
+    for (let i = iStart; i <= iEnd; i++) {
+        crearBotonLetra(String.fromCharCode(i).toUpperCase());
+        if(i === 110) crearBotonLetra("Ñ");
+    }
+}
+
+// CREAR BOTÓN LETRA
+function crearBotonLetra(letra) {
+    const abcdario = document.getElementById("abcdario");
+    if(!abcdario) return;
+    const btn = document.createElement("button");
+    btn.textContent = letra;
+    btn.value = letra;
+    btn.classList.add("letra");
+    btn.addEventListener("click", () => intentoLetra(letra));
+    abcdario.appendChild(btn);
+}
+
+// INTENTO LETRA
+function intentoLetra(letra) {
+    const btn = document.querySelector(`button[value='${letra}']`);
+    if(btn) btn.disabled = true;
+    const msg = document.getElementById("acierto");
+    if(palabra.includes(letra)) {
+        for(let i=0; i<palabra.length; i++){
+            if(palabra[i] === letra) oculta[i] = letra;
+        }
+        if(hueco) hueco.innerHTML = oculta.join(" ");
+        mostrarMensaje(msg, "¡Letra correcta!", "verde");
+    } else {
+        vidaPokemon = Math.max(0, vidaPokemon - 10);
+        actualizarBarraVida();
+        mostrarMensaje(msg, "¡Esa letra no está en la palabra!", "rojo");
+    }
+    compruebaFin();
+}
+
+// ADIVINAR PALABRA
+function adivinarPalabra() {
+    const msg = document.getElementById("acierto");
+    const input = document.getElementById("input_palabra");
+    if(!input) return;
+
+    const intento = input.value.toUpperCase();
+    if(!intento) return;
+
+    if(intento === palabra){
+        oculta = palabra.split("");
+        if(hueco) hueco.innerHTML = oculta.join(" ");
+        mostrarMensaje(msg, "¡Bien! Has adivinado la palabra", "verde");
+        compruebaFin(true);
+    } else {
+        vidaPokemon = Math.max(0, vidaPokemon - 30);
+        actualizarBarraVida();
+        mostrarMensaje(msg, "¡Fallo!", "rojo");
+        compruebaFin();
+    }
+    input.value = "";
+}
+
+// MOSTRAR MENSAJE
+function mostrarMensaje(msg, texto, color) {
+    if(!msg) return;
+    msg.textContent = texto;
+    msg.classList.add("acierto", color);
+    setTimeout(() => { msg.className = ""; msg.textContent = ""; }, 1000);
+}
+
+// COMPROBAR FIN
+function compruebaFin(adivinada = false) {
+    const msgFinal = document.getElementById("msg_final");
+    const inputPalabra = document.getElementById("input_palabra");
+    const botonPalabra = document.getElementById("btn_palabra");
+
+    if(adivinada || !oculta.includes("_")) {
+        // Deshabilitar letras y input
+        document.querySelectorAll(".letra").forEach(b => b.disabled = true);
+        if(inputPalabra) inputPalabra.disabled = true;
+        if(botonPalabra) botonPalabra.disabled = true;
+
+        // Mostrar victoria
+        victoriaSombrasVeneno();
+        return;
+    }
+
+    // Comprobar vida
+    if(vidaPokemon <= 0){
+        vidas--;
+        actualizarVidasUI();
+        if(vidas > 0){
+            if(msgFinal) msgFinal.textContent = "Has perdido una vida";
+            setTimeout(() => { if(msgFinal) msgFinal.textContent = ""; }, 2000);
+            vidaPokemon = 110;
+            actualizarBarraVida();
+            generaPalabra();
+            pintarGuiones();
+            generaABC("a", "z");
+            if(inputPalabra) inputPalabra.disabled = false;
+            if(botonPalabra) botonPalabra.disabled = false;
+        } else {
+            derrota();
+        }
+    }
+}
+
+// BARRA DE VIDA
+function actualizarBarraVida() {
+    const barra = document.getElementById("vidaFill");
+    const texto = document.getElementById("vidaPokemon");
+    const porcentaje = Math.max(0, (vidaPokemon / 110) * 100);
+    if(barra) barra.style.width = porcentaje + "%";
+    if(texto) texto.textContent = `${vidaPokemon}/110`;
+}
+
+// DERROTA
+function derrota() {
+    const msgFinal = document.getElementById("msg_final");
+    if(msgFinal) msgFinal.textContent = "Perdiste el juego";
+    document.querySelectorAll(".letra").forEach(b => b.disabled = true);
+    const inputPalabra = document.getElementById("input_palabra");
+    const botonPalabra = document.getElementById("btn_palabra");
+    if(inputPalabra) inputPalabra.disabled = true;
+    if(botonPalabra) botonPalabra.disabled = true;
+
+    const reintento = document.createElement("button");
+    reintento.textContent = "Volver a empezar";
+    reintento.id = "btn-retry";
+    reintento.style.marginTop = "20px";
+    reintento.addEventListener("click", () => {
+        if(msgFinal) msgFinal.textContent = "";
+        inicio();
+        reintento.remove();
+    });
+    if(msgFinal) msgFinal.parentNode.appendChild(reintento);
+}
+
+// ---------- FUNCIONES VICTORIA ----------
+function victoriaSombrasVeneno() {
+    // Ocultar ahorcado
+    if(ahorcadoMain) {
+        ahorcadoMain.classList.remove("mostrar");
+        ahorcadoMain.classList.add("oculto");
+    }
+
+    // Mostrar victoria
+    if(mainVictoria) {
+        mainVictoria.style.display = "flex";
+        mainVictoria.classList.add("mostrar");
+        entregarRecompensasVeneno();
+    }
+}
+
+// ---------- ENTREGA DE RECOMPENSAS ----------
+function entregarRecompensasVeneno() {
+    const pocion = document.querySelector(".main_victoria_recompensa--pocion_Curacion");
+    const piedra = document.querySelector(".main_victoria_recompensa--piedra_Evolutiva");
+    const pokeball = document.querySelector(".main_victoria_recompensa--pokeball");
+
+    if(pocion) pocion.style.display = "flex";
+    if(piedra) piedra.style.display = "flex";
+
+    if(pokeball) {
+        if(Math.random() < 0.4){
+            pokeball.style.display = "flex";
+            localStorage.setItem("tienePokeballVeneno","true");
+        } else {
+            pokeball.style.display = "none";
+            localStorage.setItem("tienePokeballVeneno","false");
+        }
+    }
+
+    // Cambiar texto a “Avanzar” y habilitar botón
+    if(btnRecoger){
+        btnRecoger.textContent = "Avanzar";
+        btnRecoger.disabled = false;
+    }
+}
+
+btnRecoger?.addEventListener("click", () => {
+    entregarRecompensasVeneno();
+    window.location.href = "RutaFuego.html";
+});
+
+// ---------- INVENTARIO ----------
+localStorage.setItem("tienePocionVeneno", "true");
+localStorage.setItem("tienePiedraVeneno", "true");
+localStorage.setItem("tienePokeballVeneno", "true");
+
+// |||||| RUTA FUEGO |||||||
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // ---------- ELEMENTOS PRINCIPALES ----------
+    const btnAceptoFuego = document.getElementById("btn_aceptoFuego");
+    const dialogoFuego = document.querySelector(".dialogo_containerFuego");
+    const eleccionContainerFuego = document.querySelector(".main_opcionesFuego");
+
+    // ---------- ATAQUE ----------
+    const btnAtacarFuego = document.getElementById("btn_atacarFuego");
+    const btnLlamaradaFuego = document.getElementById("btn_atacar--llamaradaFuego");
+    const btnPlacajeFuego = document.getElementById("btn_atacar--placajeFuego");
+    const btnAtacarNoFuego = document.getElementById("btn_atacar--noFuego");
+
+    // ---------- LINTERNA ----------
+    const btnLinternaFuego = document.getElementById("btn_linternaFuego");
+    const btnLinternaSiFuego = document.getElementById("btn_linterna--siFuego");
+    const btnLinternaNoFuego = document.getElementById("btn_linterna--noFuego");
+
+    // ---------- HUIR ----------
+    const btnHuirFuego = document.getElementById("btn_huirFuego");
+    const btnHuirSiFuego = document.getElementById("btn_huir--siFuego");
+    const btnHuirNoFuego = document.getElementById("btn_huir--noFuego");
+
+    // ---------- TEXTOS ----------
+    const textosFuego = document.querySelectorAll(".texto_opcionFuego");
+
+    // ---------- VICTORIA ----------
+    const victoriaFuego = document.getElementById("victoriaFuego");
+    const btnRecogerFuego = document.getElementById("btn_RecogerFuego");
+
+    // ---------- RECOMPENSAS ----------
+    const pocionFuego = document.querySelector(".main_victoria_recompensa--pocion_CuracionFuego");
+    const piedraFuego = document.querySelector(".main_victoria_recompensa--piedra_EvolutivaFuego");
+    const pokeballFuego = document.querySelector(".main_victoria_recompensa--pokeballFuego");
+
+    // ---------- VIDA POKÉMON ----------
+    let vidaPokemonFuego = 110;
+
+    // ---------- FUNCIONES AUXILIARES ----------
+    function ocultarConfirmacionesFuego() {
+        document.querySelectorAll(".confirmacion_boxFuego").forEach(box => box.style.display = "none");
+    }
+
+    function mostrarConfirmacionFuego(idBotonSI) {
+        ocultarConfirmacionesFuego();
+        const btnSi = document.getElementById(idBotonSI);
+        if (!btnSi) return;
+        const contenedor = btnSi.closest(".confirmacion_boxFuego");
+        if (contenedor) contenedor.style.display = "flex";
+    }
+
+    function ocultarOpcionesFuego() {
+        [btnHuirFuego, btnAtacarFuego, btnLinternaFuego].forEach(b => b.classList.add("oculto"));
+        textosFuego.forEach(t => t.classList.add("oculto"));
+    }
+
+    function mostrarOpcionesFuego() {
+        [btnHuirFuego, btnAtacarFuego, btnLinternaFuego].forEach(b => b.classList.remove("oculto"));
+        textosFuego.forEach(t => t.classList.remove("oculto"));
+    }
+
+    function actualizarBarraVidaFuego() {
+        const barra = document.getElementById("vidaFillFuego");
+        const texto = document.getElementById("vidaPokemonFuego");
+        barra.style.width = (vidaPokemonFuego / 110) * 100 + "%";
+        texto.textContent = `${vidaPokemonFuego}/110`;
+    }
+
+    // ---------- EVENTOS ----------
+    // Botón inicial Acepto
+    btnAceptoFuego?.addEventListener("click", () => {
+        dialogoFuego.style.display = "none";
+        eleccionContainerFuego.classList.remove("oculto");
+        eleccionContainerFuego.classList.add("mostrar");
+    });
+
+    // ATAQUE
+    btnAtacarFuego?.addEventListener("click", () => {
+        ocultarOpcionesFuego();
+        mostrarConfirmacionFuego("btn_atacar--llamaradaFuego");
+    });
+
+    btnLlamaradaFuego?.addEventListener("click", () => {
+        textosFuego[0].classList.remove("oculto");
+        textosFuego[0].textContent = "Vulpix ataca y vence a las sombras";
+        ocultarConfirmacionesFuego();
+        setTimeout(victoriaSombrasFuego, 1600);
+    });
+
+    btnPlacajeFuego?.addEventListener("click", () => {
+        const prob = Math.random();
+        textosFuego[0].classList.remove("oculto");
+        textosFuego[0].textContent = "Vulpix intenta Placaje";
+        ocultarConfirmacionesFuego();
+        if (prob <= 0.5) {
+            textosFuego[2].classList.remove("oculto");
+            textosFuego[2].textContent = "Has vencido a las sombras con éxito";
+            setTimeout(victoriaSombrasFuego, 1600);
+        } else {
+            const perdida = vidaPokemonFuego * 0.10;
+            vidaPokemonFuego = Math.max(0, vidaPokemonFuego - perdida);
+            actualizarBarraVidaFuego();
+            textosFuego[2].classList.remove("oculto");
+            textosFuego[2].textContent = `Vulpix falla el ataque y recibe ${Math.round(perdida)} de daño`;
+            setTimeout(() => {
+                textosFuego[0].classList.add("oculto");
+                textosFuego[2].classList.add("oculto");
+                mostrarOpcionesFuego();
+                ocultarConfirmacionesFuego();
+            }, 1600);
+        }
+    });
+
+    btnAtacarNoFuego?.addEventListener("click", () => {
+        mostrarOpcionesFuego();
+        ocultarConfirmacionesFuego();
+    });
+
+    // LINTERNA
+    btnLinternaFuego?.addEventListener("click", () => {
+        ocultarOpcionesFuego();
+        mostrarConfirmacionFuego("btn_linterna--siFuego");
+    });
+
+    btnLinternaSiFuego?.addEventListener("click", () => {
+        textosFuego[1].classList.remove("oculto");
+        textosFuego[1].textContent = "Las sombras se disipan";
+        setTimeout(victoriaSombrasFuego, 1600);
+    });
+
+    btnLinternaNoFuego?.addEventListener("click", () => {
+        mostrarOpcionesFuego();
+        ocultarConfirmacionesFuego();
+    });
+
+    // HUIR
+    btnHuirFuego?.addEventListener("click", () => {
+        ocultarOpcionesFuego();
+        mostrarConfirmacionFuego("btn_huir--siFuego");
+    });
+
+    btnHuirSiFuego?.addEventListener("click", () => {
+        const prob = Math.random();
+        ocultarConfirmacionesFuego();
+        textosFuego[2].classList.remove("oculto");
+        if (prob <= 0.3) {
+            textosFuego[2].textContent = "Huyes de las sombras con éxito";
+            setTimeout(victoriaSombrasFuego, 1600);
+        } else {
+            const perdida = vidaPokemonFuego * 0.10;
+            vidaPokemonFuego = Math.max(0, vidaPokemonFuego - perdida);
+            actualizarBarraVidaFuego();
+            textosFuego[2].textContent = `No logras huir y tu pokemon pierde ${Math.round(perdida)} de vida`;
+            setTimeout(() => {
+                textosFuego[2].classList.add("oculto");
+                mostrarOpcionesFuego();
+            }, 1600);
+        }
+    });
+
+    btnHuirNoFuego?.addEventListener("click", () => {
+        mostrarOpcionesFuego();
+        ocultarConfirmacionesFuego();
+    });
+
+    // ---------- FUNCIONES VICTORIA ----------
+    function victoriaSombrasFuego() {
+        eleccionContainerFuego.classList.add("oculto");
+        victoriaFuego.classList.remove("oculto");
+        victoriaFuego.classList.add("mostrar");
+    }
+
+    // ---------- INVENTARIO ----------
+    localStorage.setItem("tienePocionFuego", "true");
+    localStorage.setItem("tienePiedraFuego", "true");
+    localStorage.setItem("tienePokeballFuego", "true");
+
+    // ---------- ENTREGA DE RECOMPENSAS ----------
+    function entregarRecompensasFuego() {
+        pocionFuego.style.display = "flex";
+        piedraFuego.style.display = "flex";
+
+        if (Math.random() < 0.4) {
+            pokeballFuego.style.display = "flex";
+            localStorage.setItem("tienePokeballFuego", "true");
+        } else {
+            localStorage.setItem("tienePokeballFuego", "false");
+        }
+
+        btnRecogerFuego.textContent = "Avanzar";
+        btnRecogerFuego.onclick = () => {
+            victoriaFuego.classList.add("oculto");
+            window.location.href = "RutaVeneno.html";
+        };
+    }
+
+    btnRecogerFuego?.addEventListener("click", entregarRecompensasFuego);
+
+    // ---------- INICIAL ----------
+    ocultarConfirmacionesFuego();
+});
