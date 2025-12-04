@@ -1,85 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selección de Rutas</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
-<body class="routes__body">
+<body>
     <header>
         <img class="header__logo" src="fotos/Pokémon_logo.png" alt="Logo de Pokemon">
         <div class="header__icons">
             <a href="">
                 <img class="header__icon--bigger" src="fotos/icon_casa.png" alt="Icono de una casa blanca">
             </a>
-            <div class="nav inventory-container icon_pokeball">
+            <div class="nav">
                 <img class="header__icon" src="fotos/icon_pokeball.png" alt="Icono de una pokeball blanca">
                 <div class="dropdown" role="menu" aria-hidden="true">
-
+                    <div class="dropdown__item pokemon--1" role="menuitem">
+                        <p class="main__text main__text--white nav__text">Prueba</p>
+                    </div>
+                    <div class="dropdown__item pokemon--2" role="menuitem">
+                        <p class="main__text main__text--white nav__text">Prueba</p>
+                    </div>
+                    <div class="dropdown__item pokemon--3" role="menuitem">
+                        <p class="main__text main__text--white nav__text">Prueba</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="nav inventory-container icon_mochila">
+            <div class="nav">
                 <img class="header__icon" src="fotos/icon_mochila.png" alt="Icono de una mochila blanca">
                 <div class="dropdown dropdown--grid" role="menu" aria-hidden="true">
-
+                    <div class="dropdown__item" role="menuitem">
+                        <img src="" alt="">
+                        <p class="main__text main__text--white nav__text">Prueba</p>
+                    </div>
+                    <div class="dropdown__item" role="menuitem">
+                        <img src="" alt="">
+                        <p class="main__text main__text--white nav__text">Prueba</p>
+                    </div>
+                    <div class="dropdown__item" role="menuitem">
+                        <img src="" alt="">
+                        <p class="main__text main__text--white nav__text">Prueba</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </header>
-    <section class="routes">
-        <div class="routes__history game__box">
-            <h1 class="main__title">Comienza tu Aventura</h1>
-            <p class="main__text">Sales del centro pokemon, muy emocionado por el comienzo de tu viaje y por haber
-                recibido a tu nuevo compañero Pokémon. El aire fresco del exterior marca el verdadero inicio de tu
-                aventura. Tras caminar un rato por un sendero algo gastado, el bosque se abre y revela una gran
-                bifurcación. Tres caminos se extienden frente a ti, cada uno con un ambiente tan distinto que parece
-                pertenecer a un mundo diferente.</p>
+    <section class="sectionBattle">
+        <div class="sectionBattle__scene">
+
+            <div class="container__containers">
+                <div class="containerPokemon">
+                    <img class="Pokes" src="fotos/Vulpix.png" alt="">
+                </div>
+
+                <div class="containerDarkrai">
+                    <img class="Pokes" src="fotos/Darkrai.gif" alt="">
+                </div>
+                
+            </div>
+
         </div>
-        <div class="routes__options">
-            <div class="routes__option">
-                <a class="routes__link" href="RutaFuego.html">
-                    <img class="routes__option__img" src="fotos/FondoFuego.png" alt="">
-                    <h3 class="main__subtitle main__subtitle--white routes__option__txt">Camino de Sombra</h3>
-                </a>
-                <div class="routes__text game__box">
-                    <p class="main__text">El primer camino está envuelto en una penumbra inquietante. Los
-                árboles son altos, tan altos que sus copas se entrelazan formando un techo oscuro que apenas deja pasar
-                la luz. De entre sus sombras parece moverse algo, aunque cada vez que intentas fijar la vista,
-                desaparece. Una brisa fría recorre este sendero, como si te invitara… o te advirtiera.</p>
-                </div>
+        <div class="sectionBattle__options">
+            <div class="sectionBattle__optionsInfo">
+                    <div class="lifePositionEnemy">
+                        <div class="life_containerEnemy">
+                            <div id="life_enemy" class="life_enemy"></div>
+                        </div>
+                    </div>
+                    <div class="lifePositionPlayer">
+                        <div class="life_container">
+                            <div id="life_player" class="life"></div>
+                        </div>
+                    </div>
+                    
             </div>
-            <div class="routes__option">
-                <a class="routes__link" href="ruta_agua.html">
-                    <img class="routes__option__img" src="fotos/lago.png" alt="">
-                    <h3 class="main__subtitle main__subtitle--white routes__option__txt">Lago Ilusorio</h3>
-                </a>
-                <div class="routes__text game__box">
-                    <p class="main__text">El segundo camino está bordeado por un brillo suave y azulado. A
-                lo lejos se escucha el murmullo de agua, y una neblina ligera flota sobre un lago que parece reflejar
-                más de lo que muestra. La superficie del agua es tan tranquila que parece un espejo perfecto, pero por
-                alguna razón, no puedes evitar sentir que algo se oculta bajo esa calma ilusoria.</p>
-                </div>
-            </div>
-            <div class="routes__option">
-                <a class="routes__link" href="RutaVeneno.html">
-                    <img class="routes__option__img" src="fotos/FondoVeneno.png" alt="">
-                    <h3 class="main__subtitle main__subtitle--white routes__option__txt">Camino de Luz Distorsionada</h3>
-                </a>
-                <div class="routes__text game__box">
-                    <p class="main__text">El tercer camino resplandece con un resplandor extraño. No es luz
-                natural, ni parece provenir del sol. Más bien, es como si el aire mismo estuviera distorsionado. Entre
-                los árboles se ven destellos, como si espejos invisibles doblaran la realidad. Cada paso que das cerca
-                hace que la luz cambie de forma, generando ilusiones que pueden confundirte… o guiarte.</p>
-                </div>
+            <div class="sectionBattle__optionsChoose">
+                <button class="a1">
+                    <img class="a1__img"  src="fotos/Pink_buttom.png"alt=""> 
+                    <span class="buttom__text">Llamarada</span>
+                </button>
+                <button class="a2">
+                    <img class="a2__img"  src="fotos/Orange_buttom.png" alt="">
+                    <span class="buttom__text">Placaje</span>
+                </button>
+                <button class="a3">
+                    <img class="a3__img"  src="fotos/Green_buttom.png" alt="">
+                </button>
+                <button class="a4">
+                    <img class="a4__img"  src="fotos/Blue_buttom.png" alt="">
+                    <span class="buttom__text">Huir</span>
+                </button>
             </div>
         </div>
     </section>
+
+
     
+
+
+    
+
     <footer>
         <div class="footer__group">
             <div class="footer__column">
@@ -135,7 +158,6 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
-
 </html>
