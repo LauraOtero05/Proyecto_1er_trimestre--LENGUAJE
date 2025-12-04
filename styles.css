@@ -185,8 +185,10 @@ header {
 
 /*FOOTER*/
 
-.footer {
+footer {
     background-color: rgb(50, 50, 50);
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: start;
