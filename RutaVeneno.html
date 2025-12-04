@@ -1,102 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>RutaVeneno</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css.css">
-        <script type="text/javascript" src="ahorcado.js" defer></script>
-    </head>
-    <body class="body_veneno">
-        <header>
-            <img class="header__logo" src="fotos/Pokémon_logo.png" alt="Logo de Pokemon">
-            <div class="header__icons">
-                <a href="">
-                    <img class="header__icon--bigger" src="fotos/icon_casa.png" alt="Icono de una casa blanca">
-                </a>
-                <div class="nav inventory-container icon_pokeball">
-                    <img class="header__icon" src="fotos/icon_pokeball.png" alt="Icono de una pokeball blanca">
-                    <div class="dropdown" role="menu" aria-hidden="true">
-
-                    </div>
-                </div>
-
-                <div class="nav inventory-container icon_mochila">
-                    <img class="header__icon" src="fotos/icon_mochila.png" alt="Icono de una mochila blanca">
-                    <div class="dropdown dropdown--grid" role="menu" aria-hidden="true">
-
-                    </div>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RutaVeneno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="body_veneno">
+    <header>
+        <img class="header__logo" src="fotos/Pokémon_logo.png" alt="Logo de Pokemon">
+        <div class="header__icons">
+            <a href=""><img class="header__icon--bigger" src="fotos/icon_casa.png" alt="Icono de una casa blanca"></a>
+            <div class="nav inventory-container icon_pokeball">
+                <img class="header__icon" src="fotos/icon_pokeball.png" alt="Icono de una pokeball blanca">
+                <div class="dropdown" role="menu" aria-hidden="true"></div>
+            </div>
+            <div class="nav inventory-container icon_mochila">
+                <img class="header__icon" src="fotos/icon_mochila.png" alt="Icono de una mochila blanca">
+                <div class="dropdown dropdown--grid" role="menu" aria-hidden="true"></div>
+            </div>
+        </div>
+    </header>
+    <!-- DIÁLOGO INICIAL -->
+    <main class="main_veneno">
+        <div class="dialogo_container">
+            <div class="dialogo_box">
+                <div class="dialogo_contenido">
+                    <span>BIENVENIDO AL CAMINO DE LUZ DISTORSIONADA</span>
+                    <span>Te encuentras en un bosque de espejos engañosos, tienes que resolver un ahorcado para avanzar.</span>
+                    <span>Cada vez que te equivocas en una letra la vida de tu pokemon disminuye, y si muere tu pokemon comienzas de 0 el ahorcado.</span>
+                    <span>Tienes 3 vidas. Si te quedas sin vidas pierdes.</span>
+                    <span>¿Aceptas el desafío?</span>
+                    <button id="btn_acepto">Acepto</button>
                 </div>
             </div>
+        </div>
+    </main>
+    <!-- Overlay semitransparente -->
+    <div class="ahorcado_overlay" id="ahorcadoOverlay"></div>
+    <!-- AHORCADO -->
+    <main class="ahorcado_main oculto" id="ahorcado">
+        <div class="ahorcado_main_box">
+            <h1 class="titulo">Ahorcado del Espejismo</h1>
+            <h1 id="msg_final"></h1>
+            <h3 id="acierto"></h3>
+            <div class="flex_row no_wrap">
+                <h2 class="palabra" id="palabra"></h2>
             </div>
-        </header>
-        <main class="main_veneno">
-            <div class="dialogo_container">
-                <div class="dialogo_box">
-                    <div class="dialogo_contenido">
-                        <span>BIENVENIDO AL CAMINO DE LUZ DISTORSIONADA</span>
-                        <span>Te encuentras en un bosque de espejos engañosos, tienes que resolver un ahorcado para avanzar.</span>
-                        <span>Cada vez que te equivocas en una letra la vida de tu pokemon disminuye, y si muere tu pokemon comienzas de 0 el ahorcado.</span>
-                        <span>Tienes 3 vidas. Si te quedas sin vidas pierdes.</span>
-                        <span>¿Aceptas el desafío?</span>
-                        <button id="btn_acepto">Acepto</button>
-                    </div>
-                    <img class="dialogo_imagen" src="dialogo.png" alt="">
-                </div>
-            </div>
-        </main>
-        <img class="body_ahorcado_fondo" src="FondoVeneno.png" alt="">
-        <main class="ahorcado_main oculto" id="ahorcado">
-            <div class="ahorcado_main_box">
-                <img class="ahorcado_main_fondo" src="FondoAhorcado.jpg" alt="">
-                <h1 class="titulo">Ahorcado del Espejismo</h1>
-                <h1 id="msg_final"></h1>
-                <h3 id="acierto"></h3>
-                <div class="flex_row no_wrap">
-                    <h2 class="palabra" id="palabra"></h2>
-                </div>
-                <div class="flex_row" id="turnos">
-                    <div class="col">
-                        <div class="vida_container">
-                            <div class="vidaPokemon" id="vidaPokemon">110/110</div>
-                            <div class="vida_barra">
-                                <div class="vida_fill" id="vidaFill"></div>
-                            </div>
+            <div class="flex_row" id="turnos">
+                <div class="col">
+                    <div class="vida_container">
+                        <div class="vidaPokemon" id="vidaPokemon">110/110</div>
+                        <div class="vida_barra">
+                            <div class="vida_fill" id="vidaFill"></div>
                         </div>
-                        <h3>VIDAS RESTANTES: <span id="vidas"></span></h3>
                     </div>
-                </div>
-                
-                <div class="flex_row">
-                    <div class="col">
-                        <div class="flex_row" id="abcdario"></div>
-                    </div>
-                    <div class="adivinarPalabra">
-                        <label for="input_palabra">ADIVINAR LA PALABRA:</label>
-                        <input type="text" id="input_palabra">
-                        <button id="btn_palabra" onclick="adivinarPalabra()">ADIVINAR</button>
-                    </div>
+                    <h3>VIDAS RESTANTES: <span id="vidas"></span></h3>
                 </div>
             </div>
-        </main>
-        <main class="main_victoria oculto" id="victoria">
-            <div class="main_victoria_box">
-                <span>Felicidades por la victoria</span>
-                <span>Recoge tu recompensa</span>
-                <button id="btn_recoger">Recoger</button>
+            <div class="flex_row">
+                <div class="col">
+                    <div class="flex_row" id="abcdario"></div>
+                </div>
+                <div class="adivinarPalabra">
+                    <label for="input_palabra">ADIVINAR LA PALABRA:</label>
+                    <input type="text" id="input_palabra">
+                    <button id="btn_palabra" onclick="adivinarPalabra()">ADIVINAR</button>
+                </div>
             </div>
-            <div class="main_victoria_recompensa">
-                <img class="main_victoria_recompensa--pocion_Curacion" src="Poción_Curacion.png" alt="">
-                <img class="main_victoria_recompensa--piedra_Evolutiva" src="Piedra_Lunar.png" alt="">
-                <img class="main_victoria_recompensa--pokeball" src="Pokeball.png" alt="">
-            </div>
-        </main>
-        <footer>
+        </div>
+    </main>
 
-        </footer>
-    </body>
+    <!-- VICTORIA -->
+    <main class="main_victoria oculto" id="victoria">
+        <div class="main_victoria_box">
+            <span>Felicidades por la victoria</span>
+            <span>Recoge tu recompensa</span>
+            <button id="btn_recoger">Recoger</button>
+        </div>
+        <div class="main_victoria_recompensa">
+            <img class="main_victoria_recompensa--pocion_Curacion" src="fotos/Poción_Curacion.png" alt="">
+            <img class="main_victoria_recompensa--piedra_Evolutiva" src="fotos/PiedraLunar.png" alt="">
+            <img class="main_victoria_recompensa--pokeball" src="fotos/Pokeball.png" alt="">
+        </div>
+    </main>
+
+    <footer class="footerVeneno">
+        <div class="footer__group">
+            <div class="footer__column">
+                <img class="footer__logo" src="fotos/The_Pokemon_Company_White.png" alt="Logo de The Pokemon Company">
+                <a class="footer__text--link" href="https://www.pokemon.com/es/noticias-pokemon">
+                    <p class="footer__text footer__text--white">Novedades</p>
+                </a>
+                <a class="footer__text--link" href="https://parents.pokemon.com/es-es/">
+                    <p class="footer__text footer__text--white">Guía para padres y tutores</p>
+                </a>
+                <a class="footer__text--link" href="https://support.pokemon.com/hc/es">
+                    <p class="footer__text footer__text--white">Servicio de atención al cliente</p>
+                </a>
+                <a class="footer__text--link" href="https://corporate.pokemon.com/es-es/">
+                    <p class="footer__text footer__text--white">Sobre nuestra compañía</p>
+                </a>
+                <a class="footer__text--link" href="https://pokemon.gamespress.com/es">
+                    <p class="footer__text footer__text--white">Sitio de prensa</p>
+                </a>
+            </div>
+            <div class="footer__column">
+                <div class="footer__icons">
+                    <a href="https://www.facebook.com/PokemonOficialES">
+                        <img class="footer__icon" src="fotos/icon-facebook.png" alt="Logo de Facebook">
+                    </a>
+                    <a href="https://www.youtube.com/user/PokemonOficialES">
+                        <img class="footer__icon" src="fotos/icon-youtube.png" alt="Logo de Youtube">
+                    </a>
+                    <a href="https://x.com/Pokemon_ES_ESP">
+                        <img class="footer__icon" src="fotos/icon-twitter.png" alt="Logo de Twitter">
+                    </a>
+                    <a href="https://www.instagram.com/PokemonESP">
+                        <img class="footer__icon" src="fotos/icon-instagram.png" alt="Logo de Instagram">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <a href="https://www.pokemon.com/es/legal/aviso-de-privacidad">
+                    <img class="footer__img" src="fotos/coppa_safe_harbor.png" alt="Logo de Coppa Safe Harbor">
+                </a>
+                <a class="footer__text--link" href="https://www.pokemon.com/es/legal/condiciones-de-uso">
+                    <p class="footer__text footer__text--white">Condiciones de uso</p>
+                </a>
+                <a class="footer__text--link" href="https://www.pokemon.com/es/legal/aviso-de-privacidad">
+                    <p class="footer__text footer__text--white">Aviso de privacidad</p>
+                </a>
+                <a class="footer__text--link" href="https://www.pokemon.com/es/legal/pagina-de-cookies">
+                    <p class="footer__text footer__text--white">Página de Cookies</p>
+                </a>
+                <a class="footer__text--link" href="https://www.pokemon.com/es/legal/informacion">
+                    <p class="footer__text footer__text--white">Infromación legal </p>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
