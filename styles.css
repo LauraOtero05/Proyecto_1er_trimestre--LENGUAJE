@@ -185,7 +185,7 @@ header {
 
 /*FOOTER*/
 
-.footer {
+footer {
     background-color: rgb(50, 50, 50);
     display: flex;
     justify-content: center;
@@ -776,7 +776,7 @@ header {
 }
 
 /* FOOTER */
-.footerFuego {
+#footerFuego {
     background-color: rgb(50, 50, 50);
     display: flex;
     justify-content: center;
@@ -1097,7 +1097,7 @@ header {
 }
 
 /* FOOTER */
-.footerVeneno {
+#footerVeneno {
     background-color: rgb(50, 50, 50);
     display: flex;
     justify-content: center;
@@ -1251,8 +1251,8 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    max-width: 500px;    /* mucho más pequeño */
-    min-height: 50vh;    /* más compacto */
+    max-width: 500px;
+    min-height: 50vh;
     display: none;
     flex-direction: column;
     justify-content: flex-start;
@@ -1398,8 +1398,8 @@ header {
 
 /* VICTORIA - Oculto por defecto */
 .main_victoria {
-    display: none;  /* oculto hasta que se complete el ahorcado */
-    position: fixed; /* mantenerlo centrado sobre la pantalla */
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -1458,7 +1458,7 @@ header {
 }
 
 .main_victoria_recompensa img {
-    display: none; /* oculto hasta que se otorgue recompensa */
+    display: none;
     width: 150px;
     height: 150px;
 }
