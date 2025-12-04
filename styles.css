@@ -777,7 +777,7 @@ header {
 }
 
 /* FOOTER */
-.footerFuego {
+#footerFuego {
     background-color: rgb(50, 50, 50);
     display: flex;
     justify-content: center;
@@ -1098,7 +1098,7 @@ header {
 }
 
 /* FOOTER */
-.footerVeneno {
+#footerVeneno {
     background-color: rgb(50, 50, 50);
     display: flex;
     justify-content: center;
