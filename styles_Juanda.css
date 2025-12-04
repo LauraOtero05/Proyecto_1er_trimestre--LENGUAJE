@@ -347,3 +347,30 @@ footer {
 .footer__icon {
     width: 40px;
 }
+
+
+
+
+
+/*GOOD ENDING*/
+
+.vignette{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+.vignette_Container{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    
+    "uno uno uno"
+    "dos dos tres"
+    "dos dos tres"
+    "cuatro cuatro cuatro"
+    ;
+}
