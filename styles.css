@@ -423,43 +423,53 @@ footer {
 
 /*ROUTES*/
 
-.routes {
-    width: 75%;
+.routes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
     margin-top: 130px;
     gap: 20px;
+}
+
+.routes__history{
+    width: 30%;
+}
+
+.routes__options{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-left: 40px;
+}
+
+.routes__option{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px;
 }
 
-.routes__item{
-    width: 90%;
+.routes__link{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.routes__text{
-    background-color: rgb(106, 106, 106, 0.75);
-    padding: 20px;
-    text-align: justify;
-    border-radius: 10px;
-}
-
-.routes__option__img {
-    border-radius: 10px;
-    width: 40%;
-    object-fit: cover;
-    overflow: hidden;
-    display: block;
-}
-
-.routes__option {
-    background-color: rgb(106, 106, 106, 0.75);
-        width: 40%;
-    border-radius: 10px;
+    width: 50%;
+    border-radius: 20px;
+    text-decoration: none;
     position: relative;
     overflow: hidden;
+}
+
+.routes__option__img{
+    border-radius: 20px;
+    object-fit: contain;
+    overflow: hidden;
+    display: block;
 }
 
 .routes__option__txt {
@@ -478,7 +488,7 @@ footer {
     opacity: 0;
 }
 
-.routes__option:hover .routes__option__txt {
+.routes__link:hover .routes__option__txt {
     opacity: 1;
     transition:
         opacity 200ms ease,
@@ -486,8 +496,8 @@ footer {
         max-height 260ms cubic-bezier(.2, .9, .2, 1);
 }
 
-.routes__txt{
-    width: 1000px;
+.routes__text{
+    width: 70%;
 }
 
 /*WATER ROUTE*/
