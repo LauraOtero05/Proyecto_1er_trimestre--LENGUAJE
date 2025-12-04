@@ -608,7 +608,6 @@ footer {
     font-size: 30px;
 }
 
-
 .history__box{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
