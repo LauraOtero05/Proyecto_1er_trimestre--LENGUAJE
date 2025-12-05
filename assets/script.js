@@ -414,7 +414,7 @@ function entregarRecompensasVeneno() {
 
 btnRecoger?.addEventListener("click", () => {
     entregarRecompensasVeneno();
-    window.location.href = "RutaFuego.html";
+    window.location.href = "/historia/evolucion.html";
 });
 
 // ---------- INVENTARIO ----------
@@ -616,7 +616,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btnRecogerFuego.textContent = "Avanzar";
         btnRecogerFuego.onclick = () => {
             victoriaFuego.classList.add("oculto");
-            window.location.href = "RutaVeneno.html";
+            window.location.href = "/historia/evolucion.html";
         };
     }
 
