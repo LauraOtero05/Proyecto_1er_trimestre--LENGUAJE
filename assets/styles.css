@@ -21,6 +21,7 @@
 }
 
 .game__button{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -654,6 +655,7 @@ footer {
 
 .shadow{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 90%;
@@ -662,11 +664,25 @@ footer {
 }
 
 .shadow__history{
-    width: 80%;
+    width: 90%;
+    gap: 80px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    
+    align-items: center;
+}
+
+.shadow__item{
+    width: 40%;
+}
+
+.shadow__red{
+    color: #e74c3c;
+}
+
+.shadow__green{
+    color:#45a049;
+    margin-bottom: 10px;
 }
 
 /*WATER -- SWIM*/
