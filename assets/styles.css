@@ -29,7 +29,6 @@
     width: fit-content;
     height: fit-content;
     padding: 8px;
-
 }
 
 .game__buttonText{
@@ -588,6 +587,12 @@ footer {
     grid-area: d;
     object-fit: cover;
     overflow: hidden;
+}
+
+/*WATER ROADS*/
+
+.roads__text{
+    margin: 5px 5px;
 }
 
 /* EVOLUTION */
