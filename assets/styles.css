@@ -1566,7 +1566,11 @@ footer {
     justify-content: center;
     align-items: center;
     padding-top: 120px;
-
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5s2brcfm_1a3VY6WZLfuxrTK14sD2Dx5poA&s);
+    background-position:center;
+    background-repeat:round;
+    background-size: contain;
+    margin-bottom: -30px;
 }
 
 .sectionBattle__scene{
@@ -1578,7 +1582,7 @@ footer {
     background-image: url(/fotos/escenario\ de\ batalla.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 1100px;
 }
 
 .sectionBattle__scene--img{
@@ -1613,8 +1617,6 @@ footer {
 
 .containerDarkrai{
     width: 550px;
-    display: flex;
-    justify-content:end;
 }
 
 .containerPokemon{
@@ -1713,6 +1715,13 @@ footer {
     width: 100%;
     height: 70px; 
     border-radius: 15px;
+}
+
+.boxNoseve{
+    display: flex;
+    align-items: end;
+    width: 300px;
+    height: 560px;
 }
 
 .lifePositionEnemy{

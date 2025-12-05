@@ -75,6 +75,20 @@ document.addEventListener("DOMContentLoaded", () => {
         "Revivir": "/fotos/Revivir.png"
     };
 
+    function goToNextPage() {
+    const starter = sessionStorage.getItem("pokemonSeleccionado");
+
+    if (starter === "Vulpix") {
+        window.location.href = "/combates/Combate_Vulpix.html";
+    } else if (starter === "Staryu") {
+        window.location.href = "/combates/Combate_Staryu.html";
+    } else if (starter === "Nidoran") {
+        window.location.href = "/combates/Combate_Nidoran.html";
+    } else {
+        alert("Primero selecciona un Pokémon.");
+    }
+    }
+
     // Para diferenciar las dos pantallas
     const pantallaPokemon = document.querySelector('.screen__PokemonSelect');
     const pantallaInventario = document.querySelector('.screen__InvenSelect');
@@ -420,7 +434,7 @@ function entregarRecompensasVeneno() {
 
 btnRecoger?.addEventListener("click", () => {
     entregarRecompensasVeneno();
-    window.location.href = "RutaFuego.html";
+    window.location.href = "/historia/evolucion.html";
 });
 
 // ---------- INVENTARIO ----------
@@ -622,7 +636,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btnRecogerFuego.textContent = "Avanzar";
         btnRecogerFuego.onclick = () => {
             victoriaFuego.classList.add("oculto");
-            window.location.href = "RutaVeneno.html";
+            window.location.href = "/historia/evolucion.html";
         };
     }
 
@@ -649,11 +663,11 @@ function updateBars() {
     document.getElementById("life_enemy").style.width = enemyHP + "%";
 
     if (enemyHP <= 0) {
-        window.location.href = "final_Neutral.html"; 
+        window.location.href = "/final_Neutral.html"; 
     }
 
     if (playerHP <= 0) {
-        window.location.href = "BadEnding.html";
+        window.location.href = "/BadEnding.html";
     }
 }
 
@@ -716,11 +730,21 @@ document.querySelector(".a3").addEventListener("click", () => {
 
 
 // A4 – Huir (recibes daño, no puedes huir)
+const btnHuir = document.querySelector(".a4");
+const msgcombate = document.getElementById("msg_combate");
+
 document.querySelector(".a4").addEventListener("click", () => {
+    msgcombate.classList.add("mostrar");
+    msgcombate.classList.remove("oculto");
+    msgcombate.textContent = "No puedes huir y Darkrai te ataca";
+    setTimeout(() => {
+        msgcombate.classList.remove("mostrar");
+    msgcombate.classList.add("oculto");
+    }, 3000);
+
     const dmg = Math.floor(Math.random() * 6) + 5;
     playerHP -= dmg;
     console.log("No puedes huir | Recibes " + dmg + " de daño");
     lastMove = "a4"; 
     updateBars();
 });
-
