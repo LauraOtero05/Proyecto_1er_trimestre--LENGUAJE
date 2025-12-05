@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cruzar Nadando</title>
     <link rel="stylesheet" href="/assets/styles.css">
 </head>
+
 <body class="reflex__body">
     <header>
         <img class="header__logo" src="/fotos/Pokémon_logo.png" alt="Logo de Pokemon">
@@ -32,31 +34,29 @@
     <section class="reflex">
         <div class="game__box reflex__history">
             <h1 class="main__title">Avanzas en dirección al Lago</h1>
-            <p class="main__text">Apenas te acercas al borde del lago, el reflejo comienza a distorsionarse como si el
-                agua temblara sin motivo. <br> Por un instante, ves una figura que parece imitar tus movimientos… pero
-                no a
-                la perfección. <br> Antes de que puedas reaccionar, sientes un ligero mareo, como si el mundo se
-                inclinara
-                bajo tus pies.<br>
-                Parpadeas un par de veces y, cuando recuperas el equilibrio, ya no estás donde creías estar. <br> Te
-                encuentras de nuevo frente al lago, exactamente en el mismo punto donde habías comenzado. <br> No
-                recuerdas
-                qué acaba de ocurrir, solo una sensación de vacío y confusión recorriendo tu mente.<br>
-                Vuelves a observar el agua, dudando si lo que viste fue real o producto de tu imaginación. <br> Pero
-                ahora no
-                tienes más remedio: debes volver a elegir qué hacer.
+            <p class="main__text">
+                Corres hacia el borde del lago y te lanzas al agua. El impacto es frío, mucho más de lo que esperabas.
+                La temperatura te golpea como una cuchilla y te obliga a patalear con fuerza para mantenerte a flote. El
+                agua es extrañamente pesada, como si te envolviera y quisiera atraerte hacia el fondo.
+            </p>
+            <p class="main__text">
+                Tu Pokémon salta detrás de ti, pero en cuanto su cuerpo toca el agua, una nube de vapor se eleva a su
+                alrededor. Su energía se desploma casi al instante.
+            </p>
+            <p class="main__text shadow__red">
+                ¡Tu Pokémon pierde la mitad de su vida!
             </p>
             <button onclick="abrirModal()" class="game__button game__buttonText">
                 <p class="main__subtitle roads__text">Continuar</p>
             </button>
-        </div>
-        <div id="modal">
-            <div class="contenido">
-                <h2 class="main__subtitle">Has salido del camino del agua</h2>
-                <p class="main__text">Has encontrado una serie de objetos que añades a tu inventario.</p>
-                <a href="/historia/evolucion.html" class="game__button game__buttonText">Continuar</a>
+            <div id="modal">
+                <div class="game__box">
+                    <h2 class="main__subtitle shadow__green">Respiras aliviado. Has escapado.</h2>
+                    <p class="main__text">Finalmente, tras un esfuerzo que parece interminable, alcanzáis la orilla. <br> Ambos caéis
+                sobre la tierra mojada, exhaustos, pero a salvo. <br> Tu Pokémon respira con dificultad, pero sigue consciente y fuera de peligro.</p>
+                    <a href="/historia/evolucion.html" class="game__button game__buttonText">Continuar</a>
+                </div>
             </div>
-        </div>
     </section>
     <footer>
         <div class="footer__group">
@@ -115,4 +115,5 @@
     </footer>
     <script src="/assets/script.js"></script>
 </body>
+
 </html>

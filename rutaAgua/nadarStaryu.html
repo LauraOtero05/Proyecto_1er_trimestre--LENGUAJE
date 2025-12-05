@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lago Ilusorio</title>
-        <link rel="stylesheet" href="/assets/styles.css">
-    </head>
-    <body class="water__body">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruzar Nadando</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+
+<body class="reflex__body">
     <header>
         <img class="header__logo" src="/fotos/Pokémon_logo.png" alt="Logo de Pokemon">
         <div class="header__icons">
@@ -29,38 +31,35 @@
         </div>
         </div>
     </header>
-        <section class="water">
-            <div class="game__box water__history">
-                <h1 class="main__title">Llegas al lago</h1>
-                <p class="main__text">Al avanzar por el camino del Lago Ilusorio, el bosque se abre y deja ver un lago
-                    de aguas tan claras que parece irreal. La superficie refleja el cielo como si fuera un espejo
-                    perfecto, aunque hay algo extraño en él… como si el reflejo tardara un segundo en seguir tus
-                    movimientos. <br> A un lado del lago, el agua proyecta una figura que no reconoces del todo, un reflejo
-                    que parece llamarte. <br> Más adelante, entre los árboles que rodean el lago, se mueven unas sombras
-                    alargadas, casi familiares, que se deslizan sin hacer ruido. <br> Y al observar el centro del lago, parece que podría cruzarse nadando, aunque no estás seguro de si
-                    tu Pokémon podrá seguir tu ritmo o si será demasiado peligroso... 
-                </p>
+    <section class="reflex">
+        <div class="game__box reflex__history">
+            <h1 class="main__title">Avanzas en dirección al Lago</h1>
+            <p class="main__text">
+                Corres hacia el borde del lago y te lanzas al agua. El impacto es frío, mucho más de lo que esperabas.
+                La temperatura te golpea como una cuchilla y te obliga a patalear con fuerza para mantenerte a flote. El
+                agua es extrañamente pesada, como si te envolviera y quisiera atraerte hacia el fondo.
+            </p>
+            <p class="main__text">
+                En cuanto empieza a nadar, notas cómo el agua a tu alrededor se mueve de manera más fluida. Tu compañero
+                se coloca a tu lado y te impulsa con sus movimientos, guiándote hacia la otra orilla y reduciendo el
+                esfuerzo del trayecto. Gracias a su ayuda, avanzáis a gran velocidad.
+            </p>
+            <p class="main__text shadow__green">
+                Tu Pokémon te ayuda a cruzar el lago con facilidad.
+            </p>
+            <button onclick="abrirModal()" class="game__button game__buttonText">
+                <p class="main__subtitle roads__text">Continuar</p>
+            </button>
+            <div id="modal">
+                <div class="game__box">
+                    <h2 class="main__subtitle shadow__green">Respiras aliviado. Has escapado.</h2>
+                    <p class="main__text">En poco tiempo, alcanzáis la orilla opuesta. <br> Ambos salís del agua prácticamente sin agotamiento, dejando atrás el lago sin contratiempos.
+                    </p>
+                    <a href="/historia/evolucion.html" class="game__button game__buttonText">Continuar</a>
+                </div>
             </div>
-            <a href="/rutaAgua/reflejos.html">
-                <div class="water__option water__option--a">
-                    <img class="water__option__img" src="/fotos/reflejos.png" alt="">
-                    <h3 class="main__subtitle main__subtitle--white water__option__txt">Reflejos en el Lago</h3>
-                </div>
-            </a>
-            <a href="/rutaAgua/sombras.html">
-                <div class="water__option water__option--b">
-                    <img class="water__option__img" src="/fotos/sombras.png" alt="">
-                    <h3 class="main__subtitle main__subtitle--white water__option__txt">Sombras del Bosque</h3>
-                </div>
-            </a>
-            <a onclick="goToNadar()">
-                <div class="water__option water__option--c">
-                    <img class="water__option__img" src="/fotos/lago.png" alt="">
-                    <h3 class="main__subtitle main__subtitle--white water__option__txt">Cruzar nadando</h3>
-                </div>
-            </a>
-        </section>
-        <footer>
+    </section>
+    <footer>
         <div class="footer__group">
             <div class="footer__column">
                 <img class="footer__logo" src="/fotos/The_Pokemon_Company_White.png" alt="Logo de The Pokemon Company">
@@ -115,8 +114,7 @@
             </div>
         </div>
     </footer>
-        <script src="/assets/script.js"></script>
-    </body>
-    </html>
+    <script src="/assets/script.js"></script>
 </body>
+
 </html>

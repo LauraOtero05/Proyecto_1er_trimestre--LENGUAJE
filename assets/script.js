@@ -4,6 +4,22 @@ function abrirModal() {
     document.getElementById("modal").style.display = "flex";
 }
 
+/* RUTA AGUA */
+
+    function goToNadar() {
+    const starter = sessionStorage.getItem("pokemonSeleccionado");
+
+    if (starter === "Vulpix") {
+        location.href = "/rutaAgua/nadar.html";
+    } else if (starter === "Staryu") {
+        window.location.href = "/rutaAgua/nadarStaryu.html";
+    } else if (starter === "Nidoran") {
+        window.location.href = "/rutaAgua/nadar.html";
+    } else {
+        alert("Primero selecciona un Pokémon.");
+    }
+    }
+
 /*HEADER*/
 
 // === MOSTRAR SOLO EL OBJETO ELEGIDO EN LA PÁGINA ANTERIOR ===
