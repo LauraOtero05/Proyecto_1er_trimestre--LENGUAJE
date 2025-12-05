@@ -661,6 +661,14 @@ footer {
     gap: 20px;
 }
 
+.shadow__history{
+    width: 80%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+
 /*WATER -- SWIM*/
 
 .swim__body{
