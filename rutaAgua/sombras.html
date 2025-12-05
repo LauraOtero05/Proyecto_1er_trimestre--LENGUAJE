@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sombras del Bosque</title>
     <link rel="stylesheet" href="/assets/styles.css">
 </head>
+
 <body class="shadow__body">
     <header>
         <img class="header__logo" src="/fotos/Pokémon_logo.png" alt="Logo de Pokemon">
@@ -31,25 +33,27 @@
     </header>
     <section class="shadow">
         <div class="shadow__history">
-            <div class="game__box shadow__left">
-                <p class="main__text">Has encontrado una serie de objetos que añades a tu inventario.</p>
-                <p class="main__text">Has encontrado una serie de objetos que añades a tu inventario.</p>
+            <div class="game__box shadow__item">
+                <p class="main__text">Decides adentrarte por el sendero donde se mueven esas sombras silenciosas.</p>
+                <p class="main__text">De repente las sombras te atacan ¡Tienes que reaccionar rápido!</p>
+                <p class="main__text shadow__red">¡Tu Pokemon ha perdido 30 de vida!</p>
+                <p class="main__text">Decides correr a través de las sombras, tu corazón late con fuerza. El sendero
+                entre los árboles es estrecho y las sombras se acercan más rápido de lo que esperabas.</p>
             </div>
-            <div class="game__box shadow__right">
-                <p class="main__text">Has encontrado una serie de objetos que añades a tu inventario.</p>
-                <p class="main__text">Has encontrado una serie de objetos que añades a tu inventario.</p>
+            <div class="game__box shadow__item">
+                <p class="main__text">Corres sin mirar atrás, sintiendo cómo las sombras se desvanecen poco a poco. <br>
+                Finalmente atraviesas el último tramo del bosque y la luz te envuelve de golpe.
+                <p class="main__text">Corres sin mirar atrás, sintiendo cómo las sombras se desvanecen poco a poco. <br>
+                Finalmente atraviesas el último tramo del bosque y la luz te envuelve de golpe.</p>
             </div>
         </div>
-
-
-
-            <button onclick="abrirModal()" class="game__button game__buttonText">
-                <p class="main__subtitle roads__text">Continuar</p>
-            </button>
+        <button onclick="abrirModal()" class="game__button game__buttonText">
+            <p class="main__subtitle roads__text">Continuar</p>
+        </button>
         <div id="modal">
             <div class="game__box">
-                <h2 class="main__subtitle">Has salido del camino del agua</h2>
-                <p class="main__text">Has encontrado una serie de objetos que añades a tu inventario.</p>
+                <h2 class="main__subtitle shadow__green">Respiras aliviado. Has escapado.</h2>
+                <p class="main__text">Finalmente, atraviesas un último tramo cubierto de hojas y <br> sientes cómo la luz del exterior envuelve tu cuerpo.</p>
                 <a href="/historia/evolucion.html" class="game__button game__buttonText">Continuar</a>
             </div>
         </div>
@@ -111,4 +115,5 @@
     </footer>
     <script src="/assets/script.js"></script>
 </body>
+
 </html>
