@@ -2,12 +2,31 @@
 
 function abrirModal() {
     document.getElementById("modal").style.display = "flex";
+    if(Math.random() < 0.4){
+        document.getElementById("pokeball_agua").style.visibility = "visible";
+        sessionStorage.setItem('objetoSeleccionado4', "Pokeball");
+    } else {
+        document.getElementById("pokeball_agua").style.visibility = "collapse";
+    }
+}
+
+function entregarRecompensaAgua() {
+    sessionStorage.setItem('objetoSeleccionado2', "Pocion de vida");
+    sessionStorage.setItem('objetoSeleccionado5', "Piedra Agua");
 }
 
 /*HEADER*/
 
 // === MOSTRAR SOLO EL OBJETO ELEGIDO EN LA PÁGINA ANTERIOR ===
 document.addEventListener("DOMContentLoaded", () => {
+
+    const RecogerAgua = document.getElementById("RecogerAgua");
+
+    RecogerAgua.addEventListener("click", () => {
+        entregarRecompensaAgua();
+        window.location.href = "/historia/evolucion.html";
+    });
+
 
     // Leer selección guardada
     const seleccionado = sessionStorage.getItem("objetoSeleccionado");
@@ -75,8 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Pokeball": "/fotos/Pokeball.png",
         "Piedra Fuego": "/fotos/Piedra_Fuego.png",
         "Piedra Lunar": "/fotos/PiedraLunar.png",
-        "Pocion de vida": "/fotos/Poción_Curacion.png",
-
+        "Piedra Agua": "/fotos/PiedraAgua.png"
     };
 
     function goToNextPage() {
@@ -154,26 +172,78 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function mostrarObjetoEnDropdown() {
-    const mochilaNav = document.querySelectorAll('.nav')[1];
-    const dropdownObjeto = mochilaNav.querySelector('.dropdown--grid');
-    const nombre = sessionStorage.getItem('objetoSeleccionado');
+        const mochilaNav = document.querySelectorAll('.nav')[1];
+        const dropdownObjeto = mochilaNav.querySelector('.dropdown--grid');
+        const nombre = sessionStorage.getItem('objetoSeleccionado');
+        const nombre2 = sessionStorage.getItem('objetoSeleccionado2');
+        const nombre3 = sessionStorage.getItem('objetoSeleccionado3');
+        const nombre4 = sessionStorage.getItem('objetoSeleccionado4');
+        const nombre5 = sessionStorage.getItem('objetoSeleccionado5');
+        const nombre6 = sessionStorage.getItem('objetoSeleccionado6');
 
-    // Limpiar contenido previo
-    // dropdownObjeto.innerHTML = '';
+        // Limpiar contenido previo
+        // dropdownObjeto.innerHTML = '';
 
-    if (nombre) {
-        // Crear item con el objeto
-        const item = document.createElement('div');
-        item.classList.add('dropdown__item');
+        if (nombre) {
+            // Crear item con el objeto
+            const item = document.createElement('div');
+            item.classList.add('dropdown__item');
 
-        item.innerHTML = `<img src="${objetImages[nombre]}" alt="${nombre}"><p class="main__text main__text--white nav__text">${nombre}</p>`;
+            item.innerHTML = `<img src="${objetImages[nombre]}" alt="${nombre}"><p class="main__text main__text--white nav__text">${nombre}</p>`;
 
-        dropdownObjeto.appendChild(item);
-        dropdownObjeto.classList.add('show'); // mostrar dropdown
-    } else {
-        // Si no hay objeto seleccionado, mantener vacío y oculto
-        dropdownObjeto.classList.remove('show');
-    }
+            dropdownObjeto.appendChild(item);
+            dropdownObjeto.classList.add('show'); // mostrar dropdown
+        }
+        if (nombre2) {
+            // Crear item con el objeto
+            const item = document.createElement('div');
+            item.classList.add('dropdown__item');
+
+            item.innerHTML = `<img src="${objetImages[nombre2]}" alt="${nombre2}"><p class="main__text main__text--white nav__text">${nombre2}</p>`;
+
+            dropdownObjeto.appendChild(item);
+            dropdownObjeto.classList.add('show'); // mostrar dropdown
+        }
+        if (nombre3) {
+            // Crear item con el objeto
+            const item = document.createElement('div');
+            item.classList.add('dropdown__item');
+
+            item.innerHTML = `<img src="${objetImages[nombre3]}" alt="${nombre3}"><p class="main__text main__text--white nav__text">${nombre3}</p>`;
+
+            dropdownObjeto.appendChild(item);
+            dropdownObjeto.classList.add('show'); // mostrar dropdown
+        }
+        if (nombre4) {
+            // Crear item con el objeto
+            const item = document.createElement('div');
+            item.classList.add('dropdown__item');
+
+            item.innerHTML = `<img src="${objetImages[nombre4]}" alt="${nombre4}"><p class="main__text main__text--white nav__text">${nombre4}</p>`;
+
+            dropdownObjeto.appendChild(item);
+            dropdownObjeto.classList.add('show'); // mostrar dropdown
+        }
+        if (nombre5) {
+            // Crear item con el objeto
+            const item = document.createElement('div');
+            item.classList.add('dropdown__item');
+
+            item.innerHTML = `<img src="${objetImages[nombre5]}" alt="${nombre5}"><p class="main__text main__text--white nav__text">${nombre5}</p>`;
+
+            dropdownObjeto.appendChild(item);
+            dropdownObjeto.classList.add('show'); // mostrar dropdown
+        }
+        if (nombre6) {
+            // Crear item con el objeto
+            const item = document.createElement('div');
+            item.classList.add('dropdown__item');
+
+            item.innerHTML = `<img src="${objetImages[nombre6]}" alt="${nombre6}"><p class="main__text main__text--white nav__text">${nombre4}</p>`;
+
+            dropdownObjeto.appendChild(item);
+            dropdownObjeto.classList.add('show'); // mostrar dropdown
+        }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -419,10 +489,14 @@ function entregarRecompensasVeneno() {
     if(pocion) pocion.style.display = "flex";
     if(piedra) piedra.style.display = "flex";
 
+    sessionStorage.setItem('objetoSeleccionado2', "Pocion de vida");
+    sessionStorage.setItem('objetoSeleccionado3', "Piedra Lunar");
+
     if(pokeball) {
         if(Math.random() < 0.4){
             pokeball.style.display = "flex";
             localStorage.setItem("tienePokeballVeneno","true");
+            sessionStorage.setItem('objetoSeleccionado4', "Pokeball");
         } else {
             pokeball.style.display = "none";
             localStorage.setItem("tienePokeballVeneno","false");
@@ -630,6 +704,9 @@ document.addEventListener("DOMContentLoaded", () => {
         pocionFuego.style.display = "flex";
         piedraFuego.style.display = "flex";
 
+        sessionStorage.setItem('objetoSeleccionado2', "Pocion de vida");
+        sessionStorage.setItem('objetoSeleccionado6', "Piedra Fuego");
+
         if (Math.random() < 0.4) {
             pokeballFuego.style.display = "flex";
             localStorage.setItem("tienePokeballFuego", "true");
@@ -667,11 +744,11 @@ function updateBars() {
     document.getElementById("life_enemy").style.width = enemyHP + "%";
 
     if (enemyHP <= 0) {
-        window.location.href = "/final_Neutral.html"; 
+        window.location.href = "/finales/final_Neutral.html"; 
     }
 
     if (playerHP <= 0) {
-        window.location.href = "/BadEnding.html";
+        window.location.href = "/finales/BadEnding.html";
     }
 }
 
