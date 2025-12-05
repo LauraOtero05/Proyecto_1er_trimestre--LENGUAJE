@@ -172,6 +172,10 @@ header {
     color: white;
 }
 
+.main__subtitle--black {
+    color: black;
+}
+
 .main__text {
     font-family: "Jersey 10", "Pixelify Sans", Arial, Helvetica, sans-serif;
     font-size: 20px;
