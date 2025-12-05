@@ -710,11 +710,21 @@ document.querySelector(".a3").addEventListener("click", () => {
 
 
 // A4 – Huir (recibes daño, no puedes huir)
+const btnHuir = document.querySelector(".a4");
+const msgcombate = document.getElementById("msg_combate");
+
 document.querySelector(".a4").addEventListener("click", () => {
+    msgcombate.classList.add("mostrar");
+    msgcombate.classList.remove("oculto");
+    msgcombate.textContent = "No puedes huir y Darkrai te ataca";
+    setTimeout(() => {
+        msgcombate.classList.remove("mostrar");
+    msgcombate.classList.add("oculto");
+    }, 3000);
+
     const dmg = Math.floor(Math.random() * 6) + 5;
     playerHP -= dmg;
     console.log("No puedes huir | Recibes " + dmg + " de daño");
     lastMove = "a4"; 
     updateBars();
 });
-
