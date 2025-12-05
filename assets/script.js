@@ -58,15 +58,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Asociar imagenes a constantes
     const pokemonImages = {
-        "Nidoran": "fotos/Nidoran.png",
-        "Staryu": "fotos/Staryu.png",
-        "Vulpix": "fotos/Vulpix.png"
+        "Nidoran": "/fotos/Nidoran.png",
+        "Staryu": "/fotos/Staryu.png",
+        "Vulpix": "/fotos/Vulpix.png"
     };
 
     const objetImages = {
-        "Pocion de vida": "fotos/Pocion.png",
-        "Linterna": "fotos/Linterna.png",
-        "Revivir": "fotos/Revivir.png"
+        "Pocion de vida": "/fotos/Pocion.png",
+        "Linterna": "/fotos/Linterna.png",
+        "Revivir": "/fotos/Revivir.png"
     };
 
     // Para diferenciar las dos pantallas
@@ -217,7 +217,7 @@ function actualizarVidasUI() {
     if (!contenedorVidas) return;
     contenedorVidas.innerHTML = "";
     for (let i = 0; i < vidas; i++) {
-        contenedorVidas.innerHTML += "<img src='fotos/hardcore-heart.png' alt='vida' class='icono_vida'>";
+        contenedorVidas.innerHTML += "<img src='/fotos/hardcore-heart.png' alt='vida' class='icono_vida'>";
     }
 }
 
@@ -414,7 +414,7 @@ function entregarRecompensasVeneno() {
 
 btnRecoger?.addEventListener("click", () => {
     entregarRecompensasVeneno();
-    window.location.href = "RutaFuego.html";
+    window.location.href = "/historia/evolucion.html";
 });
 
 // ---------- INVENTARIO ----------
@@ -616,7 +616,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btnRecogerFuego.textContent = "Avanzar";
         btnRecogerFuego.onclick = () => {
             victoriaFuego.classList.add("oculto");
-            window.location.href = "RutaVeneno.html";
+            window.location.href = "/historia/evolucion.html";
         };
     }
 

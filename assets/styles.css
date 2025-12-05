@@ -29,7 +29,6 @@
     width: fit-content;
     height: fit-content;
     padding: 8px;
-
 }
 
 .game__buttonText{
@@ -410,7 +409,7 @@ footer {
 
 .routes__body {
     background-color: rgb(222, 222, 222);
-    background-image: url(fotos/imagen_caminosA.png);
+    background-image: url(/fotos/imagen_caminosA.png);
     background-size: cover;
     background-blend-mode: multiply;
     margin: 0px;
@@ -506,7 +505,7 @@ footer {
 
 .water__body {
     background-color: rgb(222, 222, 222);
-    background-image: url(fotos/lago.png);
+    background-image: url(/fotos/lago.png);
     background-size: cover;
     background-position: bottom;
     background-blend-mode: multiply;
@@ -590,6 +589,12 @@ footer {
     overflow: hidden;
 }
 
+/*WATER ROADS*/
+
+.roads__text{
+    margin: 5px 5px;
+}
+
 /* EVOLUTION */
 
 .body__evolution{
@@ -604,10 +609,10 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(fotos/fondo_Bosque.png);
+    background-image: url(/fotos/fondo_Bosque.png);
     background-color: rgb(187, 185, 185);
     background-blend-mode: multiply;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     height: 1000px;
@@ -674,7 +679,7 @@ footer {
     align-items: center;
     margin-top: 60px;
     margin-bottom: -30px;
-    background-image: url(fotos/Fondo_pokemons_lateral.jpg);
+    background-image: url(/fotos/Fondo_pokemons_lateral.jpg);
     background-color: rgb(187, 185, 185);
     background-blend-mode: multiply;
     background-position: center;
@@ -684,7 +689,8 @@ footer {
 }
 
 .history__title{
-    font-family: "Pixelify Sans", "Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
+    font-family: "Jersey 10", "Pixelify Sans", "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 100;
     font-size: 70px;
 }
 
@@ -794,7 +800,7 @@ footer {
 
 /* BODY */
 .bodyFuego {
-    background-image: url(fotos/FondoFuego.png);
+    background-image: url(/fotos/FondoFuego.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -838,7 +844,7 @@ footer {
     transform: translate(-50%, -50%);
     width: 695px;        /* ancho real de la imagen */
     height: 359px;       /* alto real de la imagen */
-    background-image: url(fotos/dialogo.png);
+    background-image: url(/fotos/dialogo.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -883,7 +889,7 @@ footer {
     transform: translate(-50%, -50%);
     width: 695px;               /* ancho real de dialogo.png */
     height: 359px;              /* alto real de dialogo.png */
-    background-image: url(fotos/dialogo.png);
+    background-image: url(/fotos/dialogo.png);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -1117,7 +1123,7 @@ footer {
           BODY
 ======================*/
 .body_veneno {
-    background-image: url(fotos/FondoVeneno.png);
+    background-image: url(/fotos/FondoVeneno.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1144,7 +1150,7 @@ footer {
     transform: translate(-50%, -50%);
     width: 695px;        /* ancho real de la imagen */
     height: 359px;       /* alto real de la imagen */
-    background-image: url(fotos/dialogo.png);
+    background-image: url(/fotos/dialogo.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -1274,7 +1280,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(fotos/FondoAhorcado.jpg);
+    background-image: url(/fotos/FondoAhorcado.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1491,7 +1497,7 @@ footer {
     display: flex;
     justify-content: end;
     align-items: center;
-    background-image: url(fotos/escenario\ de\ batalla.jpg);
+    background-image: url(/fotos/escenario\ de\ batalla.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 1100px;
@@ -1510,7 +1516,7 @@ footer {
 }
 
 .sectionBattle__optionsInfo{
-    background-image: url(fotos/battle_options.jpg);
+    background-image: url(/fotos/battle_options.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 400px;
@@ -1707,7 +1713,7 @@ footer {
     align-items: center;
     margin-top: 60px;
     margin-bottom: -30px;
-    background-image: url(fotos/Fondo_pokemons_lateral.jpg);
+    background-image: url(/fotos/Fondo_pokemons_lateral.jpg);
     background-color: rgb(187, 185, 185);
     background-blend-mode: multiply;
     background-position: center;
