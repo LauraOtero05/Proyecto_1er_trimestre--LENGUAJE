@@ -71,7 +71,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const objetImages = {
         "Pocion de vida": "/fotos/Pocion.png",
         "Linterna": "/fotos/Linterna.png",
-        "Revivir": "/fotos/Revivir.png"
+        "Revivir": "/fotos/Revivir.png",
+        "Pokeball": "/fotos/Pokeball.png",
+        "Piedra Fuego": "/fotos/Piedra_Fuego.png",
+        "Piedra Lunar": "/fotos/PiedraLunar.png",
+        "Pocion de vida": "/fotos/Poción_Curacion.png",
+
     };
 
     function goToNextPage() {
