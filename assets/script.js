@@ -69,6 +69,20 @@ document.addEventListener("DOMContentLoaded", () => {
         "Revivir": "/fotos/Revivir.png"
     };
 
+    function goToNextPage() {
+    const starter = sessionStorage.getItem("pokemonSeleccionado");
+
+    if (starter === "Vulpix") {
+        window.location.href = "/combates/Combate_Vulpix.html";
+    } else if (starter === "Staryu") {
+        window.location.href = "/combates/Combate_Staryu.html";
+    } else if (starter === "Nidoran") {
+        window.location.href = "/combates/Combate_Nidoran.html";
+    } else {
+        alert("Primero selecciona un Pokémon.");
+    }
+    }
+
     // Para diferenciar las dos pantallas
     const pantallaPokemon = document.querySelector('.screen__PokemonSelect');
     const pantallaInventario = document.querySelector('.screen__InvenSelect');
@@ -643,11 +657,11 @@ function updateBars() {
     document.getElementById("life_enemy").style.width = enemyHP + "%";
 
     if (enemyHP <= 0) {
-        window.location.href = "final_Neutral.html"; 
+        window.location.href = "/final_Neutral.html"; 
     }
 
     if (playerHP <= 0) {
-        window.location.href = "BadEnding.html";
+        window.location.href = "/BadEnding.html";
     }
 }
 
