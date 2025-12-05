@@ -607,7 +607,7 @@ footer {
     background-image: url(fotos/fondo_Bosque.png);
     background-color: rgb(187, 185, 185);
     background-blend-mode: multiply;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     height: 1000px;
