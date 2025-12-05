@@ -185,8 +185,10 @@ header {
 
 /*FOOTER*/
 
-.footer {
+footer {
     background-color: rgb(50, 50, 50);
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -423,20 +425,11 @@ header {
 
 .routes {
     width: 75%;
-    margin-top: 100px;
+    margin-top: 130px;
     gap: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.routes__history {
-    background-color: rgb(106, 106, 106, 0.75);
-    padding: 10px;
-    text-align: justify;
-    border-radius: 10px;
-    text-align: center;
 }
 
 .routes__item{
@@ -455,7 +448,7 @@ header {
 
 .routes__option__img {
     border-radius: 10px;
-    width: 50%;
+    width: 40%;
     object-fit: cover;
     overflow: hidden;
     display: block;
@@ -463,6 +456,7 @@ header {
 
 .routes__option {
     background-color: rgb(106, 106, 106, 0.75);
+        width: 40%;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -490,6 +484,10 @@ header {
         opacity 200ms ease,
         transform 180ms ease,
         max-height 260ms cubic-bezier(.2, .9, .2, 1);
+}
+
+.routes__txt{
+    width: 1000px;
 }
 
 /*WATER ROUTE*/
@@ -523,13 +521,7 @@ header {
 }
 
 .water__history{
-    background-color: rgb(106, 106, 106, 0.75);
-    padding: 10px;
-    text-align: justify;
-    border-radius: 10px;
-    grid-area: a;
-    text-align: center;
-}
+    grid-area: a;}
 
 .water__option__img {
     border-radius: 10px;
@@ -700,7 +692,6 @@ header {
     font-family:"Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
     font-size: 30px;
 }
-
 
 .history__box{
     display: grid;
@@ -1252,8 +1243,8 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    max-width: 500px;    /* mucho más pequeño */
-    min-height: 50vh;    /* más compacto */
+    max-width: 500px;
+    min-height: 50vh;
     display: none;
     flex-direction: column;
     justify-content: flex-start;
@@ -1399,8 +1390,8 @@ header {
 
 /* VICTORIA - Oculto por defecto */
 .main_victoria {
-    display: none;  /* oculto hasta que se complete el ahorcado */
-    position: fixed; /* mantenerlo centrado sobre la pantalla */
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -1459,7 +1450,7 @@ header {
 }
 
 .main_victoria_recompensa img {
-    display: none; /* oculto hasta que se otorgue recompensa */
+    display: none;
     width: 150px;
     height: 150px;
 }
