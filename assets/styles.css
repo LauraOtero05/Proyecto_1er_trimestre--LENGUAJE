@@ -595,6 +595,96 @@ footer {
     margin: 5px 5px;
 }
 
+#modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);   
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+/*WATER -- REFLEX*/
+
+.reflex__body {
+    background-color: rgb(222, 222, 222);
+    background-image: url(/fotos/reflejos.png);
+    background-size: cover;
+    background-position: bottom;
+    background-blend-mode: multiply;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 130px;
+    gap: 20px;
+}
+
+.reflex__history{
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+/*WATER -- SHADOWS*/
+
+.shadow__body{
+    background-color: rgb(222, 222, 222);
+    background-image: url(/fotos/sombras.png);
+    background-size: cover;
+    background-position: bottom;
+    background-blend-mode: multiply;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 130px;
+    gap: 20px;
+}
+
+.shadow__history{
+    width: 80%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+/*WATER -- SWIM*/
+
+.swim__body{
+    background-color: rgb(222, 222, 222);
+    background-image: url(/fotos/lago.png);
+    background-size: cover;
+    background-position: bottom;
+    background-blend-mode: multiply;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* EVOLUTION */
 
 .body__evolution{

@@ -1,3 +1,8 @@
+/*MODAL*/
+
+function abrirModal() {
+    document.getElementById("modal").style.display = "flex";
+}
 
 /*HEADER*/
 
