@@ -1,4 +1,10 @@
 
+/*MODAL*/
+
+function abrirModal() {
+    document.getElementById("modal").style.display = "flex";
+}
+
 /*HEADER*/
 
 // === MOSTRAR SOLO EL OBJETO ELEGIDO EN LA PÁGINA ANTERIOR ===
