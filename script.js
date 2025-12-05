@@ -625,3 +625,96 @@ document.addEventListener("DOMContentLoaded", () => {
     // ---------- INICIAL ----------
     ocultarConfirmacionesFuego();
 });
+
+// -------------------------------
+// VARIABLES DE VIDA
+// -------------------------------
+let playerHP = 100;
+let enemyHP = 100;
+
+// Para bloquear el ataque fuerte si se usó antes
+let lastMove = null;
+
+// -------------------------------
+// ACTUALIZAR BARRAS
+// -------------------------------
+function updateBars() {
+    document.getElementById("life_player").style.width = playerHP + "%";
+    document.getElementById("life_enemy").style.width = enemyHP + "%";
+
+    if (enemyHP <= 0) {
+        window.location.href = "final_Neutral.html"; 
+    }
+
+    if (playerHP <= 0) {
+        window.location.href = "BadEnding.html";
+    }
+}
+
+// -------------------------------
+// ATAQUE DEL ENEMIGO
+// -------------------------------
+function enemyAttack() {
+    const dmg = Math.floor(Math.random() * 10) + 3;
+    playerHP -= dmg;
+    console.log("El enemigo te hace " + dmg + " de daño");
+    updateBars();
+}
+
+// -------------------------------
+// ACCIONES DEL JUGADOR
+// -------------------------------
+
+// A1 – Ataque normal
+document.querySelector(".a1").addEventListener("click", () => {
+    const dmg = Math.floor(Math.random() * 10) + 5;
+    enemyHP -= dmg;
+    console.log("Usas ataque normal y haces " + dmg + " de daño");
+    lastMove = "a1";
+    updateBars();
+    setTimeout(enemyAttack, 1000);
+});
+
+// A2 – Ataque medio
+document.querySelector(".a2").addEventListener("click", () => {
+    const dmg = Math.floor(Math.random() * 14) + 8;
+    enemyHP -= dmg;
+    console.log("Ataque medio | Daño: " + dmg);
+    lastMove = "a2";
+    updateBars();
+    setTimeout(enemyAttack, 1000);
+});
+
+// A3 – Ataque fuerte (no se puede repetir 2 turnos seguidos)
+document.querySelector(".a3").addEventListener("click", () => {
+    // Primero bloqueamos el turno para que no ataque el enemigo
+    turnoJugador = false;
+    bloquearBotones();
+
+    // Mostrar inventario preestablecido
+    mostrarObjetoEnDropdown();
+
+    // Opcional: abrir el dropdown del inventario automáticamente
+    const mochilaNav = document.querySelectorAll('.nav')[1];
+    const dropdownObjeto = mochilaNav.querySelector('.dropdown--grid');
+    if (dropdownObjeto) dropdownObjeto.classList.add("open");
+
+    console.log("Inventario abierto");
+
+    // Después de un tiempo, podrías devolver el turno al jugador
+    setTimeout(() => {
+        turnoJugador = true;
+        desbloquearBotones();
+    }, 1000);
+});
+
+
+// A4 – Huir (recibes daño, no puedes huir)
+document.querySelector(".a4").addEventListener("click", () => {
+    const dmg = Math.floor(Math.random() * 6) + 5;
+    playerHP -= dmg;
+    console.log("No puedes huir | Recibes " + dmg + " de daño");
+    lastMove = "a4"; 
+    updateBars();
+});
+

@@ -423,43 +423,53 @@ footer {
 
 /*ROUTES*/
 
-.routes {
-    width: 75%;
+.routes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
     margin-top: 130px;
     gap: 20px;
+}
+
+.routes__history{
+    width: 30%;
+}
+
+.routes__options{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-left: 40px;
+}
+
+.routes__option{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px;
 }
 
-.routes__item{
-    width: 90%;
+.routes__link{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.routes__text{
-    background-color: rgb(106, 106, 106, 0.75);
-    padding: 20px;
-    text-align: justify;
-    border-radius: 10px;
-}
-
-.routes__option__img {
-    border-radius: 10px;
-    width: 40%;
-    object-fit: cover;
-    overflow: hidden;
-    display: block;
-}
-
-.routes__option {
-    background-color: rgb(106, 106, 106, 0.75);
-        width: 40%;
-    border-radius: 10px;
+    width: 50%;
+    border-radius: 20px;
+    text-decoration: none;
     position: relative;
     overflow: hidden;
+}
+
+.routes__option__img{
+    border-radius: 20px;
+    object-fit: contain;
+    overflow: hidden;
+    display: block;
 }
 
 .routes__option__txt {
@@ -478,7 +488,7 @@ footer {
     opacity: 0;
 }
 
-.routes__option:hover .routes__option__txt {
+.routes__link:hover .routes__option__txt {
     opacity: 1;
     transition:
         opacity 200ms ease,
@@ -486,8 +496,8 @@ footer {
         max-height 260ms cubic-bezier(.2, .9, .2, 1);
 }
 
-.routes__txt{
-    width: 1000px;
+.routes__text{
+    width: 70%;
 }
 
 /*WATER ROUTE*/
@@ -769,7 +779,7 @@ footer {
 }
 
 /* FOOTER */
-.footerFuego {
+#footerFuego {
     background-color: rgb(50, 50, 50);
     display: flex;
     justify-content: center;
@@ -1090,7 +1100,7 @@ footer {
 }
 
 /* FOOTER */
-.footerVeneno {
+#footerVeneno {
     background-color: rgb(50, 50, 50);
     display: flex;
     justify-content: center;
@@ -1244,8 +1254,8 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    max-width: 500px;    /* mucho más pequeño */
-    min-height: 50vh;    /* más compacto */
+    max-width: 500px;
+    min-height: 50vh;
     display: none;
     flex-direction: column;
     justify-content: flex-start;
@@ -1391,8 +1401,8 @@ footer {
 
 /* VICTORIA - Oculto por defecto */
 .main_victoria {
-    display: none;  /* oculto hasta que se complete el ahorcado */
-    position: fixed; /* mantenerlo centrado sobre la pantalla */
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -1451,11 +1461,265 @@ footer {
 }
 
 .main_victoria_recompensa img {
-    display: none; /* oculto hasta que se otorgue recompensa */
+    display: none;
     width: 150px;
     height: 150px;
 }
 
 .main_victoria_recompensa img:hover {
     transform: scale(1.2);
+}
+
+/*COMBATE*/
+.sectionBattle{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+
+}
+
+.sectionBattle__scene{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-image: url(fotos/escenario\ de\ batalla.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sectionBattle__scene--img{
+    width: 90%;
+    height: 100%;
+}
+
+.sectionBattle__options{
+    width: 50%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.sectionBattle__optionsInfo{
+    background-image: url(fotos/battle_options.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    width: 100%;
+    height: 60%;
+    display: grid;
+
+}
+
+.container__containers{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    
+}
+
+.containerDarkrai{
+    width: 550px;
+    display: flex;
+    justify-content:end;
+}
+
+.containerPokemon{
+    height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+.Pokes{
+    width: 300px;
+    height: 300px;
+}
+
+
+.sectionBattle__optionsChoose{
+
+    width: 100%;
+    height: 57%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    
+    "uno dos"
+    "tres cuatro"
+    
+    ;
+}
+
+.a1{
+    grid-area: uno;
+    width: auto;
+    height: auto; 
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+}
+.a2{
+    grid-area: dos;
+    width: auto;
+    height: auto; 
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+}
+.a3{
+    grid-area: tres;
+    width: auto;
+    height: auto; 
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+}
+.a4{
+    grid-area: cuatro;
+    width: auto;
+    height: auto; 
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+}
+
+.a1__img{
+    width: 100%;
+    height: 70px; 
+    border-radius: 15px;
+}
+
+.buttom__text {
+    position: absolute;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.a2__img{
+    width: 100%;
+    height: 70px; 
+    border-radius: 15px;
+}
+
+.a3__img{
+    width: 100%;
+    height: 70px; 
+    border-radius: 15px;
+}
+
+.a4__img{
+    width: 100%;
+    height: 70px; 
+    border-radius: 15px;
+}
+
+.lifePositionEnemy{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.lifePositionPlayer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
+/*Vida de .vida-contenedor*/
+
+.life_container{
+  display: flex;
+  justify-content: center;
+  grid-area: player;
+  width: 200px;
+  height: 20px;
+  background-color: #444; /* color de fondo */
+  border-radius: 10px;
+  overflow: hidden; /* para que el borde redondeado afecte al interior */
+}
+
+.life {
+  width: 100%;        /* empieza al 100% */
+  height: 100%;
+  background-color: green;
+  transition: width 0.3s ease; /* animación suave */
+}
+
+.life_containerEnemy{
+  width: 200px;
+  height: 20px;
+  background-color: #444; /* color de fondo */
+  border-radius: 10px;
+  overflow: hidden; /* para que el borde redondeado afecte al interior */
+}
+
+.life_enemy{
+  width: 100%;        /* empieza al 100% */
+  height: 100%;
+  background-color: red;
+  transition: width 0.3s ease; /* animación suave */
+}
+
+/*BAD ENDING*/
+
+.bodyBadEnding{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+.sectionBadEnding{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: -30px;
+    background-image: url(fotos/Fondo_pokemons_lateral.jpg);
+    background-color: rgb(187, 185, 185);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+
+.BadEnding__text{
+    width: 30%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    opacity: 70%;
+    color: white;
+    text-align: center;
+}
+
+.DarkraiP{
+    width: 60%;
 }
