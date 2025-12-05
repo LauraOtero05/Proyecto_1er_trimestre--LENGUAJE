@@ -50,13 +50,20 @@
         <button onclick="abrirModal()" class="game__button game__buttonText">
             <p class="main__subtitle roads__text">Continuar</p>
         </button>
-        <div id="modal">
-            <div class="game__box">
-                <h2 class="main__subtitle shadow__green">Respiras aliviado. Has escapado.</h2>
-                <p class="main__text">Finalmente, atraviesas un último tramo cubierto de hojas y <br> sientes cómo la luz del exterior envuelve tu cuerpo.</p>
-                <a href="/historia/evolucion.html" class="game__button game__buttonText">Continuar</a>
+            <div id="modal">
+                <div class="game__box">
+                    <h2 class="main__subtitle shadow__green">Respiras aliviado. Has escapado.</h2>
+                    <p class="main__text">Finalmente, tras un esfuerzo que parece interminable, alcanzáis la orilla. <br> Ambos caéis
+                sobre la tierra mojada, exhaustos, pero a salvo. <br> Tu Pokémon respira con dificultad, pero sigue consciente y fuera de peligro.</p>
+                <div class="contenido__reward">
+                    <img class="reward__icon" src="/fotos/Pocion.png" alt="">
+                    <img class="reward__icon" src="/fotos/PiedraAgua.png" alt="">
+                    <img id="pokeball_agua" class="reward__icon" src="/fotos/Pokeball.png" alt="">
+                </div>
+                    <!-- <a href="/historia/evolucion.html" class="game__button game__buttonText">Continuar</a> -->
+                    <button id="RecogerAgua" class="game__button game__buttonText">Continuar</button>
+                </div>
             </div>
-        </div>
     </section>
     <footer>
         <div class="footer__group">
