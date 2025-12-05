@@ -674,7 +674,8 @@ footer {
 }
 
 .history__title{
-    font-family: "Pixelify Sans", "Jersey 10", "Montserrat", Arial, Helvetica, sans-serif;
+    font-family: "Jersey 10", "Pixelify Sans", "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 100;
     font-size: 70px;
 }
 
