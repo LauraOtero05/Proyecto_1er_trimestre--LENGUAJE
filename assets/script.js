@@ -814,7 +814,7 @@ function usarPokeball() {
 
     if (resultado === 1) {
         // 👉 CAMBIA esta ruta por la que quieras
-        window.location.href = "/historia/capturado.html";
+        window.location.href = "/finales/Goodending.html";
     } else {
         msgcombate.classList.add("mostrar");
     msgcombate.classList.remove("oculto");
