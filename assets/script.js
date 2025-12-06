@@ -643,11 +643,11 @@ function updateBars() {
     document.getElementById("life_enemy").style.width = enemyHP + "%";
 
     if (enemyHP <= 0) {
-        window.location.href = "final_Neutral.html"; 
+        window.location.href = "/finales/final_Neutral.html"; 
     }
 
     if (playerHP <= 0) {
-        window.location.href = "BadEnding.html";
+        window.location.href = "/finales/BadEnding.html";
     }
 }
 

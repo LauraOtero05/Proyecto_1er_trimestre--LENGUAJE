@@ -1573,6 +1573,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 0%;
+    color: white;
 }
 .a2{
     grid-area: dos;
@@ -1736,4 +1737,5 @@ footer {
 
 .DarkraiP{
     width: 60%;
+    color: white;
 }
