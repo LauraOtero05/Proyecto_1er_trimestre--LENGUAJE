@@ -9,8 +9,8 @@ En este proyecto hemos desarrollado una aventura narrativa ramificada donde el u
 * Finales diferentes dependiendo de las decisiones anteriores
 
 ## Estructuras
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](Layouts_1.png)
+![alt text](Layouts_1.png)
 
 
 ## Tecnologías utilizadas
