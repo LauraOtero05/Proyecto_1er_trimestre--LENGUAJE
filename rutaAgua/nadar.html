@@ -1,14 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cruzar Nadando</title>
     <link rel="stylesheet" href="/assets/styles.css">
 </head>
-<body>
-    <a class="game__button game__buttonText" href="/historia/evolucion.html">
-        <p class="main__subtitle roads__text">Continuar mi Camino</p>
-    </a>
+
+<body class="reflex__body">
+    <header>
+        <img class="header__logo" src="/fotos/Pokémon_logo.png" alt="Logo de Pokemon">
+        <div class="header__icons">
+            <a href="/index.html">
+                <img class="header__icon--bigger" src="/fotos/icon_casa.png" alt="Icono de una casa blanca">
+            </a>
+            <div class="nav inventory-container icon_pokeball">
+                <img class="header__icon" src="/fotos/icon_pokeball.png" alt="Icono de una pokeball blanca">
+                <div class="dropdown" role="menu" aria-hidden="true">
+
+                </div>
+            </div>
+
+            <div class="nav inventory-container icon_mochila">
+                <img class="header__icon" src="/fotos/icon_mochila.png" alt="Icono de una mochila blanca">
+                <div class="dropdown dropdown--grid" role="menu" aria-hidden="true">
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <section class="reflex">
+        <div class="game__box reflex__history">
+            <h1 class="main__title">Avanzas en dirección al Lago</h1>
+            <p class="main__text">
+                Corres hacia el borde del lago y te lanzas al agua. El impacto es frío, mucho más de lo que esperabas.
+                La temperatura te golpea como una cuchilla y te obliga a patalear con fuerza para mantenerte a flote. El
+                agua es extrañamente pesada, como si te envolviera y quisiera atraerte hacia el fondo.
+            </p>
+            <p class="main__text">
+                Tu Pokémon salta detrás de ti, pero en cuanto su cuerpo toca el agua, una nube de vapor se eleva a su
+                alrededor. Su energía se desploma casi al instante.
+            </p>
+            <p class="main__text shadow__red">
+                ¡Tu Pokémon pierde la mitad de su vida!
+            </p>
+            <button onclick="abrirModal()" class="game__button game__buttonText">
+                <p class="main__subtitle roads__text">Continuar</p>
+            </button>
+            <div id="modal">
+                <div class="game__box">
+                    <h2 class="main__subtitle shadow__green">Respiras aliviado. Has escapado.</h2>
+                    <p class="main__text">Finalmente, tras un esfuerzo que parece interminable, alcanzáis la orilla. <br> Ambos caéis
+                sobre la tierra mojada, exhaustos, pero a salvo. <br> Tu Pokémon respira con dificultad, pero sigue consciente y fuera de peligro.</p>
+                <div class="contenido__reward">
+                    <img class="reward__icon" src="/fotos/Pocion.png" alt="">
+                    <img class="reward__icon" src="/fotos/PiedraAgua.png" alt="">
+                    <img id="pokeball_agua" class="reward__icon" src="/fotos/Pokeball.png" alt="">
+                </div>
+                    <!-- <a href="/historia/evolucion.html" class="game__button game__buttonText">Continuar</a> -->
+                    <button id="RecogerAgua" class="game__button game__buttonText">Continuar</button>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="footer__group">
+            <div class="footer__column">
+                <img class="footer__logo" src="/fotos/The_Pokemon_Company_White.png" alt="Logo de The Pokemon Company">
+                <a class="footer__text--link" href="https://www.pokemon.com/es/noticias-pokemon">
+                    <p class="footer__text footer__text--white">Novedades</p>
+                </a>
+                <a class="footer__text--link" href="https://parents.pokemon.com/es-es/">
+                    <p class="footer__text footer__text--white">Guía para padres y tutores</p>
+                </a>
+                <a class="footer__text--link" href="https://support.pokemon.com/hc/es">
+                    <p class="footer__text footer__text--white">Servicio de atención al cliente</p>
+                </a>
+                <a class="footer__text--link" href="https://corporate.pokemon.com/es-es/">
+                    <p class="footer__text footer__text--white">Sobre nuestra compañía</p>
+                </a>
+                <a class="footer__text--link" href="https://pokemon.gamespress.com/es">
+                    <p class="footer__text footer__text--white">Sitio de prensa</p>
+                </a>
+            </div>
+            <div class="footer__column">
+                <div class="footer__icons">
+                    <a href="https://www.facebook.com/PokemonOficialES">
+                        <img class="footer__icon" src="/fotos/icon-facebook.png" alt="Logo de Facebook">
+                    </a>
+                    <a href="https://www.youtube.com/user/PokemonOficialES">
+                        <img class="footer__icon" src="/fotos/icon-youtube.png" alt="Logo de Youtube">
+                    </a>
+                    <a href="https://x.com/Pokemon_ES_ESP">
+                        <img class="footer__icon" src="/fotos/icon-twitter.png" alt="Logo de Twitter">
+                    </a>
+                    <a href="https://www.instagram.com/PokemonESP">
+                        <img class="footer__icon" src="/fotos/icon-instagram.png" alt="Logo de Instagram">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <a href="https://www.pokemon.com/es/legal/aviso-de-privacidad">
+                    <img class="footer__img" src="/fotos/coppa_safe_harbor.png" alt="Logo de Coppa Safe Harbor">
+                </a>
+                <a class="footer__text--link" href="https://www.pokemon.com/es/legal/condiciones-de-uso">
+                    <p class="footer__text footer__text--white">Condiciones de uso</p>
+                </a>
+                <a class="footer__text--link" href="https://www.pokemon.com/es/legal/aviso-de-privacidad">
+                    <p class="footer__text footer__text--white">Aviso de privacidad</p>
+                </a>
+                <a class="footer__text--link" href="https://www.pokemon.com/es/legal/pagina-de-cookies">
+                    <p class="footer__text footer__text--white">Página de Cookies</p>
+                </a>
+                <a class="footer__text--link" href="https://www.pokemon.com/es/legal/informacion">
+                    <p class="footer__text footer__text--white">Infromación legal </p>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/script.js"></script>
 </body>
+
 </html>

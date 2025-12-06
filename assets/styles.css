@@ -21,6 +21,7 @@
 }
 
 .game__button{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,6 +121,7 @@ header {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
     color: white;
 }
 
@@ -168,6 +170,10 @@ header {
 
 .main__subtitle--white {
     color: white;
+}
+
+.main__subtitle--black {
+    color: black;
 }
 
 .main__text {
@@ -336,7 +342,7 @@ footer {
 .track__box--Hidden{
     display: none;
     font-family: "Jersey 10", "Pixelify Sans", Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     padding: 10px;
 }
 
@@ -594,6 +600,122 @@ footer {
 .roads__text{
     margin: 5px 5px;
 }
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);   
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+/*WATER -- REFLEX*/
+
+.reflex__body {
+    background-color: rgb(222, 222, 222);
+    background-image: url(/fotos/reflejos.png);
+    background-size: cover;
+    background-position: bottom;
+    background-blend-mode: multiply;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 130px;
+    gap: 20px;
+}
+
+.reflex__history{
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+/*WATER -- SHADOWS*/
+
+.shadow__body{
+    background-color: rgb(222, 222, 222);
+    background-image: url(/fotos/sombras.png);
+    background-size: cover;
+    background-position: bottom;
+    background-blend-mode: multiply;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 130px;
+    gap: 20px;
+}
+
+.shadow__history{
+    width: 90%;
+    gap: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow__item{
+    width: 40%;
+}
+
+.shadow__red{
+    color: #e74c3c;
+}
+
+.shadow__green{
+    color:#45a049;
+    margin-bottom: 10px;
+}
+
+/*WATER -- SWIM*/
+
+.swim__body{
+    background-color: rgb(222, 222, 222);
+    background-image: url(/fotos/lago.png);
+    background-size: cover;
+    background-position: bottom;
+    background-blend-mode: multiply;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido__reward{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.reward__icon {
+    width: 50px;
+}
+
 
 /* EVOLUTION */
 
@@ -1484,9 +1606,9 @@ footer {
     justify-content: center;
     align-items: center;
     padding-top: 120px;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5s2brcfm_1a3VY6WZLfuxrTK14sD2Dx5poA&s);
+    background-image: url(https://i.pinimg.com/736x/34/81/af/3481af3e44269a6c702729c5e54f5bab.jpg);
     background-position:center;
-    background-repeat:round;
+    background-repeat:unset;
     background-size: contain;
     margin-bottom: -30px;
 }
@@ -1738,4 +1860,58 @@ footer {
 .DarkraiP{
     width: 60%;
     color: white;
+}
+
+.vignette{
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 900px;
+}
+
+.vignette_Container{
+    width: 80%;
+    height: 900px;
+    display: grid;
+    grid-template-areas: 
+    
+    "uno dos tres"
+    "cuatro cinco seis"
+    "cuatro cinco seis"
+    ;
+    gap: 20px;
+}
+
+.vignette1{
+    grid-area: uno;
+}
+
+.vignette1--img{
+    width: 100%;
+}
+.vignette2{
+    grid-area: dos;
+    
+}
+
+.vignette3{
+    grid-area: tres;
+    
+}
+
+.vignette4{
+    grid-area: cuatro;
+    
+}
+
+.vignette5{
+    grid-area: cinco;
+    
+}
+
+.vignette6{
+    grid-area: seis;
+    
 }

@@ -8,6 +8,11 @@ En este proyecto hemos desarrollado una aventura narrativa ramificada donde el u
 * Modificación o/y utilización de inventario
 * Finales diferentes dependiendo de las decisiones anteriores
 
+## Estructuras
+![alt text](Layouts_1.png)
+![alt text](Layouts_1.png)
+
+
 ## Tecnologías utilizadas
 * HTML
 * CSS
