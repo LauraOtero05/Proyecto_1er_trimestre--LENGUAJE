@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const item = document.createElement('div');
             item.classList.add('dropdown__item');
 
-            item.innerHTML = `<img src="${objetImages[nombre6]}" alt="${nombre6}"><p class="main__text main__text--white nav__text">${nombre4}</p>`;
+            item.innerHTML = `<img src="${objetImages[nombre6]}" alt="${nombre6}"><p class="main__text main__text--white nav__text">${nombre6}</p>`;
 
             dropdownObjeto.appendChild(item);
             dropdownObjeto.classList.add('show'); // mostrar dropdown
