@@ -10,7 +10,7 @@ En este proyecto hemos desarrollado una aventura narrativa ramificada donde el u
 
 ## Estructuras
 ![alt text](Layouts_1.png)
-![alt text](Layouts_1.png)
+![alt text](Layouts_2.png)
 
 
 ## Tecnologías utilizadas
